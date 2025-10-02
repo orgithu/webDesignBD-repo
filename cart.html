@@ -5,14 +5,32 @@
 </head>
 <body>
     <header class="header">
-        <h1>Shopping Cart</h1>
+        <h1>Techstore</h1>
+        <div id="nav">
+            <a href="/cart.html">Сагс</a>
+        </div>
     </header>
     <div class="main">
         <h2>Your Cart Items</h2>
-        <p>List of items in the cart.</p>
+        <ol>
+            <li>
+                <label>
+                    <input type="checkbox" name="product" checked>
+                    <a href="/product/product1-detail.html" target="_blank">
+                    Intel - Core i5 14400F , Asus - Dual RTX 5060 8GB OC Edition , Thermaltake View 270 TG Mid Tower Chassis - White
+                    </a>
+                </label>
+            </li>
+        </ol>
+        <button>Сагснаас устгах</button>
+        <form action="/checkout.html" method="get">
+            <button type="submit">Захиалах</button>
+        </form>
     </div>
-    <div class="footer">
-        <p>Footer content</p>
-    </div>
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <a href="/about.html">Бидний тухай</a> |
+        <a href="/contact.html">Холбоо барих</a> |
+    </footer>
 </body>
 </html>
