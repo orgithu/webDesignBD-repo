@@ -1,59 +1,82 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <title>Product Detail</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Intel - Core i5 14400F | TechStore</title>
+    <meta name="description" content="Intel i5 14400F prebuilt PC with Asus Dual RTX 5060, 16GB DDR5, 256GB NVMe. Free assembly & shipping.">
 </head>
 <body>
-    <header class="header">
-        <a href="/Homepage/index.html"><h1><img src="logo.png" alt="TechStore Logo" width="50">TechStore</h1></a>
-        <div id="nav">
-            <a href="/product_order/cart.html">Сагс</a>
-            <a href="/shop_user/profile.html">Профайл</a>
-            <a href="/shop_user/login.html">Нэвтрэх</a>
+    <!-- Header (same across all pages) -->
+    <header>
+        <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <nav>
+            <a href="/Homepage/index.html">Нүүр</a> |
+            <a href="/product_order/cart.html">Сагс</a> |
+            <a href="/shop_user/profile.html">Профайл</a> |
+            <a href="/shop_user/login.html">Нэвтрэх</a> |
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
-        </div>
+        </nav>
     </header>
-    <div class="main">
-        <img src="/media/product1.png" alt="Product Image" style="max-width:500px;">
-        <h1 id="product-name">Intel - Core i5 14400F , Asus - Dual RTX 5060 8GB OC Edition , Thermaltake View 270 TG Mid Tower Chassis - White</h1>
-        <h2>Үнэ: 2,920,000 ₮</h2>
-        <h3></h3>
-        <ul id="product-description">
-            <li>Intel - Core i5 14400F</li>
-            <li>Asrock - B760M-H2/M.2</li>
-            <li>KingBank 16GB DDR5 6000MHz Black NoRGB</li>
-            <li>Apacer 256GB AS2280P4 M.2 PCIe Gen3</li>
-            <li>Asus - Dual RTX 5060 8GB OC Edition</li>
-            <li>Deepcool - PF700 700W</li>
-            <li>Jonsbo - CR-1000 EVO White</li>
-            <li>Thermaltake View 270 TG Mid Tower Chassis - White</li>
-            <li>120mm RGB fanx3 White</li>
-            <li>Windows license key</li>
-            <li>1 Year Warranty</li>
-            <li>Free assembly</li>
-            <li>Free Shipping</li>
-        </ul>
-        <form action="/product_order/cart.html" method="get">
-            <button type="submit">Сагсанд нэмэх</button>
-        </form>
-        <form action="/product_order/checkout.html" method="get">
-            <button>Захиалах</button>
-        </form>
-        <button>Хуваалцах</button>
-    </div>
-    <div>
-        <h3>Бусад төстэй бүтээгдэхүүнүүд</h3>
-        <ul>
-            <li><a href="/product/product2-detail.html">Intel - Core i5 13400F , Asus - Dual RTX 4060 8GB OC Edition , Thermaltake View 270 TG Mid Tower Chassis - Black</a></li>
-            <li><a href="/product/product3-detail.html">Intel - Core i5 12400F , Asus - Dual RTX 5060 8GB OC Edition , Corsair 3000D AIRFLOW Case</a></li>
-        </ul>
-    </div>
+
+    <main>
+        <section>
+            <img src="/media/product1.png" alt="Product Image - Intel i5 14400F" width="500">
+            <h1 id="product-name">Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition</h1>
+            <h2>Үнэ: 2,920,000 ₮</h2>
+            <ul id="product-description">
+                <li>Intel - Core i5 14400F</li>
+                <li>Asrock - B760M-H2/M.2</li>
+                <li>KingBank 16GB DDR5 6000MHz Black NoRGB</li>
+                <li>Apacer 256GB AS2280P4 M.2 PCIe Gen3</li>
+                <li>Asus - Dual RTX 5060 8GB OC Edition</li>
+                <li>Deepcool - PF700 700W</li>
+                <li>Jonsbo - CR-1000 EVO White</li>
+                <li>Thermaltake View 270 TG Mid Tower Chassis - White</li>
+                <li>120mm RGB fan x3 White</li>
+                <li>Windows license key</li>
+                <li>1 Year Warranty</li>
+                <li>Free assembly</li>
+                <li>Free Shipping</li>
+            </ul>
+
+            <form action="/product_order/cart.html" method="get">
+                <button type="submit">Сагсанд нэмэх</button>
+            </form>
+            <form action="/product_order/checkout.html" method="get">
+                <button type="submit">Захиалах</button>
+            </form>
+            <button type="button">Хуваалцах</button>
+        </section>
+
+        <section>
+            <h3>Бусад төстэй бүтээгдэхүүнүүд</h3>
+            <ul>
+                <li>
+                    <a href="/product/product2-detail.html">
+                        <img src="/media/product2.png" alt="Product 2 Thumbnail" width="100" style="vertical-align:middle;margin-right:8px;">
+                        Intel - Core i5 13400F, Asus - Dual RTX 4060 8GB OC Edition
+                    </a>
+                </li>
+                <li>
+                    <a href="/product/product3-detail.html">
+                        <img src="/media/product3.png" alt="Product 3 Thumbnail" width="100" style="vertical-align:middle;margin-right:8px;">
+                        Intel - Core i5 12400F, Asus - Dual RTX 5060 8GB OC Edition
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer (same across all pages) -->
     <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-        <a href="/Homepage/about.html">Бидний тухай</a> |
-        <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
-        <a href="/Homepage/our-team.html">Манай баг</a> |
-        <a href="/Homepage/contact-us.html">Холбоо барих</a> |
+        <nav>
+            <a href="/Homepage/about.html">Бидний тухай</a> |
+            <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="/Homepage/our-team.html">Манай баг</a> |
+            <a href="/Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
     </footer>
 </body>
 </html>
