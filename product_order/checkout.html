@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <title>Checkout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Төлбөр | TechStore</title>
+    <meta name="description" content="Checkout page - confirm your products and complete the purchase.">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html> "><h1><img src="logo.png" alt="TechStore Logo" width="50">TechStore</h1></a>
-        <div id="nav">
-            <a href="/product_order/cart.html">Сагс</a>
-            <a href="/shop_user/profile.html">Профайл</a>
-            <a href="/shop_user/login.html">Нэвтрэх</a>
+    <!-- Header (same across all pages) -->
+    <header>
+        <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <nav>
+            <a href="/category/products.html">Бүтээгдэхүүн</a> |
+            <a href="/product_order/cart.html">Сагс</a> |
+            <a href="/shop_user/profile.html">Профайл</a> |
+            <a href="/shop_user/login.html">Нэвтрэх</a> |
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
-        </div>
+        </nav>
     </header>
-    <div class="main">
+
+    <main>
         <h2>Төлбөр төлөх</h2>
         <ul>
-            <li><a href="/product/product1-detail.html">
-                Intel - Core i5 14400F , Asus - Dual RTX 5060 8GB OC Edition , Thermaltake View 270 TG Mid Tower Chassis - White</a>
+            <li>
+                <a href="/product/product1-detail.html">
+                    <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
+                    Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
+                </a>
             </li>
         </ul>
         <h3>Нийт үнэ: 2,920,000 ₮</h3>
-            <button>Цуцлах</button><br>
+        <button type="button">Цуцлах</button>
         <form action="/product_order/order-confirm.html" method="get">
             <button type="submit">Захиалах</button>
         </form>
-    </div>
+    </main>
+
+    <!-- Footer (same across all pages) -->
     <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-        <a href="/Homepage/about.html">Бидний тухай</a> |
-        <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
-        <a href="/Homepage/our-team.html">Манай баг</a> |
-        <a href="/Homepage/contact-us.html">Холбоо барих</a> |
+        <nav>
+            <a href="/Homepage/about.html">Бидний тухай</a> |
+            <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="/Homepage/our-team.html">Манай баг</a> |
+            <a href="/Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
     </footer>
 </body>
 </html>

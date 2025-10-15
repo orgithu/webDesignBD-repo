@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html lang="mn">
 <head>
-    <title>Shopping Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Сагс | TechStore</title>
+    <meta name="description" content="Таны сагс - TechStore. Хэрэглэхэд хялбар захиалга, үнэгүй угсралт ба хүргэлт.">
 </head>
 <body>
-    <header class="header">
-        <a href="/index.html> "><h1><img src="logo.png" alt="TechStore Logo" width="50">TechStore</h1></a>
-        <div id="nav">
-            <a href="/product_order/cart.html">Сагс</a>
-            <a href="/shop_user/profile.html">Профайл</a>
-            <a href="/shop_user/login.html">Нэвтрэх</a>
+    <!-- Header (same across all pages) -->
+    <header>
+        <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <nav>
+            <a href="/category/products.html">Бүтээгдэхүүн</a> |
+            <a href="/product_order/cart.html">Сагс</a> |
+            <a href="/shop_user/profile.html">Профайл</a> |
+            <a href="/shop_user/login.html">Нэвтрэх</a> |
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
-        </div>
+        </nav>
     </header>
-    <div class="main">
+
+    <main>
         <h2>Сагсанд байгаа бүтээгдэхүүнүүд</h2>
         <ol>
             <li>
                 <label>
                     <input type="checkbox" name="product" checked>
                     <a href="/product/product1-detail.html" target="_blank">
-                    Intel - Core i5 14400F , Asus - Dual RTX 5060 8GB OC Edition , Thermaltake View 270 TG Mid Tower Chassis - White
+                        <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
+                        Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
                     </a>
                 </label>
             </li>
         </ol>
-        <button>Сагснаас устгах</button>
+        <button type="button">Сагснаас устгах</button>
         <form action="/product_order/checkout.html" method="get">
             <button type="submit">Захиалах</button>
         </form>
-    </div>
+    </main>
+
+    <!-- Footer (same across all pages) -->
     <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-        <a href="/Homepage/about.html">Бидний тухай</a> |
-        <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
-        <a href="/Homepage/our-team.html">Манай баг</a> |
-        <a href="/Homepage/contact-us.html">Холбоо барих</a> |
+        <nav>
+            <a href="/Homepage/about.html">Бидний тухай</a> |
+            <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="/Homepage/our-team.html">Манай баг</a> |
+            <a href="/Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
     </footer>
 </body>
 </html>
