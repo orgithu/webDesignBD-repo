@@ -1,0 +1,243 @@
+:root {
+  --primary-color: #007bff; 
+  --secondary-color: #6c757d;
+  --accent-color: #28a745; /*buttons*/
+  --background-color: #f8f9fa; /*background*/
+  --text-color: #212529; /*text*/
+  --header-bg: #ffffff; /*header*/
+  --footer-bg: #343a40; /*footer*/
+  --font-family: 'Arial', sans-serif;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--header-bg);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+header img {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s;
+}
+
+nav a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a {
+    text-decoration: none;
+}
+
+form {
+  margin: 1rem 0;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 300px;
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer nav {
+  justify-content: center;
+}
+
+footer a {
+  color: white;
+}
+
+/* Product grid and cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s;
+}
+
+.product-link:hover {
+  transform: translateY(-5px);
+}
+
+.product-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+/* Old style compatibility for product4-6 */
+.header {
+  background-color: var(--header-bg);
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav {
+  display: flex;
+  gap: 1rem;
+}
+
+#nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s;
+}
+
+#nav a:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
