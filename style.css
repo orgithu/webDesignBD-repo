@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #007bff; 
-  --secondary-color: #6c757d;
+  --nav-text-color: #ffffff;
+  --primary-color: #000000; 
   --accent-color: #28a745; /*buttons*/
-  --background-color: #f8f9fa; /*background*/
-  --text-color: #212529; /*text*/
-  --header-bg: #ffffff; /*header*/
+  --background-color: #ffffff; /*background*/
+  --text-color: #000000; /*text*/
+  --header-bg: #2C334D; /*header*/
   --footer-bg: #343a40; /*footer*/
   --font-family: 'Arial', sans-serif;
   --border-radius: 8px;
@@ -31,6 +31,7 @@ header {
 }
 
 header h1 {
+  color: var(--nav-text-color);
   margin: 0;
   font-size: 1.5rem;
 }
@@ -46,7 +47,7 @@ nav {
 }
 
 nav a {
-  color: var(--primary-color);
+  color: var(--nav-text-color);
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
@@ -112,7 +113,7 @@ form {
 
 input {
   padding: 0.5rem;
-  border: 1px solid var(--secondary-color);
+  border: 1px solid var(--primary-color);
   border-radius: var(--border-radius);
   width: 100%;
   max-width: 300px;
@@ -169,7 +170,7 @@ footer a {
 .product-card img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
 }
