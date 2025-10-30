@@ -31,7 +31,7 @@
                 </a>
             </li>
         </ul>
-        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong>#123456</strong></p>
+        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#random</strong></p>
         <form action="/product_order/order-tracking.html" method="get">
             <button type="submit">Захиалга хянах</button>
         </form>
@@ -46,6 +46,10 @@
             <a href="/Homepage/our-team.html">Манай баг</a> |
             <a href="/Homepage/contact-us.html">Холбоо барих</a>
         </nav>
-    </footer>
+    <script>
+        //generate random 6-digit tracking code
+        const randomCode = Math.floor(Math.random() * 900000) + 100000;
+        document.getElementById('track-code').textContent = '#' + randomCode;
+    </script>
 </body>
 </html>
