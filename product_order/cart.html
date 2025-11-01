@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../style.css">
     <title>Сагс | TechStore</title>
     <meta name="description" content="Таны сагс - TechStore. Хэрэглэхэд хялбар захиалга, үнэгүй угсралт ба хүргэлт.">
 </head>
@@ -11,11 +10,16 @@
     <!-- Header (same across all pages) -->
     <header>
         <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <form action="/searchs.html" method="get">
+            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="submit"><img src="/media/search-icon.svg" alt="Search" width="12px"></button>
+        </form>
         <nav>
             <a href="/category/products.html">Бүтээгдэхүүн</a> |
+            <a href="/category/categories.html">Ангилал</a> |
             <a href="/product_order/cart.html">Сагс</a> |
             <a href="/shop_user/profile.html">Профайл</a> |
-            <a href="/shop_user/login.html">Нэвтрэх</a> |
+            <a href="/Homepage/login.html">Нэвтрэх</a> |
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
         </nav>
     </header>
@@ -28,8 +32,12 @@
                     <input type="checkbox" name="product" checked>
                     <a href="/product/product1-detail.html" target="_blank">
                         <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
-                        Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
+                        Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition |<span class="price"> Үнэ: 2,920,000 ₮</span>
                     </a>
+                    <h3>Тоо ширхэг:</h3>
+                    <input type="number" name="quantity" value="1" min="1">
+                    <h3>Нийт үнэ:</h3>
+                    <p class="total-price">2,920,000 ₮</p>
                 </label>
             </li>
         </ol>
@@ -51,3 +59,4 @@
     </footer>
 </body>
 </html>
+

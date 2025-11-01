@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="mn">
-<head>
-  <meta charset="UTF-8">
-  <title>Нэвтрэх</title>
-</head>
-<body><!-- Header (same across all pages) -->
+# PowerShell script to replace all <header> sections in HTML files with a standardized header
+# Usage: Run this script in the root directory of your project
+# It will recursively find all .html files and replace their header sections
+# powershell -ExecutionPolicy Bypass -File replace_headers.ps1
+$root = Get-Location  # Uses current directory as root
+
+$newHeader = @'
+<!-- Header (same across all pages) -->
     <header>
         <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
         <form action="/searchs.html" method="get">
@@ -20,23 +21,13 @@
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
         </nav>
     </header>
-  
-  <h2>Нэвтрэх</h2>
-    <label for="email">Имэйл хаяг:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+'@
 
-    <label for="password">Нууц үг:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+Get-ChildItem -Path $root -Filter *.html -Recurse | ForEach-Object {
+    $content = Get-Content $_.FullName -Raw
+    $regex = [regex] '(?s)(<!-- Header.*?-->)?\s*<header>.*?</header>'
+    $newContent = $regex.Replace($content, $newHeader)
+    Set-Content $_.FullName $newContent
+}
 
-    <button type="submit">Нэвтрэх</button>
-  </form>
-
-  <p>Шинэ хэрэглэгч үү? <a href="register.html">Бүртгүүлэх</a></p>
-
-  <footer>
-        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-        <a href="/about.html">Бидний тухай</a> |
-        <a href="/contact.html">Холбоо барих</a> |
-    </footer>
-</body>
-</html>
+Write-Host "Header replacement completed for all HTML files."

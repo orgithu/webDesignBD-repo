@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="../style.css">
     <title>Захиалга батлагдсан | TechStore</title>
     <meta name="description" content="Таны захиалга амжилттай хийгдсэн. Захиалгын мэдээллийг эндээс харна уу.">
 </head>
@@ -11,11 +10,16 @@
     <!-- Header (same across all pages) -->
     <header>
         <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <form action="/searchs.html" method="get">
+            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="submit"><img src="/media/search-icon.svg" alt="Search" width="12px"></button>
+        </form>
         <nav>
             <a href="/category/products.html">Бүтээгдэхүүн</a> |
+            <a href="/category/categories.html">Ангилал</a> |
             <a href="/product_order/cart.html">Сагс</a> |
             <a href="/shop_user/profile.html">Профайл</a> |
-            <a href="/shop_user/login.html">Нэвтрэх</a> |
+            <a href="/Homepage/login.html">Нэвтрэх</a> |
             <a href="/shop_user/register.html">Бүртгүүлэх</a>
         </nav>
     </header>
@@ -31,10 +35,30 @@
                 </a>
             </li>
         </ul>
-        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#random</strong></p>
-        <form action="/product_order/order-tracking.html" method="get">
-            <button type="submit">Захиалга хянах</button>
-        </form>
+        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#123456</strong></p>
+        <p>Холбоо барих дугаар: 99991121</p>
+        <p>E-Barimt г таны и-мэйл хаягаар илгээсэн.</p>
+        <section>
+            <h3>Хүргэлтийн мэдээлэл</h3>
+            <p>Нэр: NAME</p>
+            <p>Хаяг: ADDRESS</p>
+            <p>Утас: PHONE</p>
+            <p>И-мэйл: EMAIL</p>
+        </section>
+
+        <section>
+            <h3>Төлбөрийн мэдээлэл</h3>
+            <p>Төлбөрийн хэлбэр: Карт</p>
+            <p>Төлөв: Амжилттай</p>
+        </section>
+        <section>
+            <h3>Хянах</h3>
+            <p>Та захиалгын явцыг доорх товчоор хянаж болно:</p>
+            <form action="/product_order/order-tracking.html" method="get">
+                <button type="submit">Захиалга хянах</button>
+            </form>
+            <p>Хүргэлт хүлээгдэж буй огноо: 2025-11-04</p>
+        </section>
     </main>
 
     <!-- Footer (same across all pages) -->
@@ -46,10 +70,7 @@
             <a href="/Homepage/our-team.html">Манай баг</a> |
             <a href="/Homepage/contact-us.html">Холбоо барих</a>
         </nav>
-    <script>
-        //generate random 6-digit tracking code
-        const randomCode = Math.floor(Math.random() * 900000) + 100000;
-        document.getElementById('track-code').textContent = '#' + randomCode;
-    </script>
+    </footer>
 </body>
 </html>
+
