@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Нэвтрэх</title>
+</head>
+<body>
+  <header>
+    <a href="../Homepage/index.html"><h1><img src="../logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+    <form action="../search.html" method="get">
+      <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+      <button type="submit"><img src="../media/search-icon.svg" alt="Search" width="12px"></button>
+    </form>
+    <input type="checkbox" id="nav-toggle" style="display: none;">
+    <label for="nav-toggle" class="hamburger">☰</label>
+    <nav>
+      <a href="../category/products.html">Бүх бүтээгдэхүүн</a>
+      <a href="../category/computer.html">💻 Компьютер</a>
+      <a href="../category/accessories.html">🖱️ Дагалдах хэрэгсэл</a>
+      <a href="../category/offers.html">💰 Урамшуулал</a>
+      <a href="../product_order/cart.html">🛒 Сагс</a>
+      <a href="profile.html">👤 Профайл</a>
+      <a href="login.html">Нэвтрэх</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Нэвтрэх</h2>
+      <form action="profile.html" method="post">
+        <label for="email">Имэйл хаяг:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Нууц үг:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Нэвтрэх</button>
+      </form>
+
+      <p>Шинэ хэрэглэгч үү? <a href="register.html">Бүртгүүлэх</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+    <nav>
+      <a href="../Homepage/about.html">Бидний тухай</a> |
+      <a href="../Homepage/contact-us.html">Холбоо барих</a>
+    </nav>
+  </footer>
+</body>
+</html>

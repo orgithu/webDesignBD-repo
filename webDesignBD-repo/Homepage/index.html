@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>TECH STORE</title>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <input type="checkbox" id="nav-toggle" style="display: none;">
+            <label for="nav-toggle" class="hamburger">☰</label>
+            <a href="index.html" class="logo-link">
+                <img src="../logo.png" alt="TechStore Logo" width="50">
+                <div class="logo-text">
+                    <h1>TechStore</h1>
+                    <p class="logo-tagline">We have tested...</p>
+                </div>
+            </a>
+        </div>
+        <div class="header-center">
+            <form action="../search.html" method="get" class="search-form">
+                <input type="text" name="all" placeholder="Хайлт жишээ нь: RTX 2080" class="search-input">
+                <div class="search-quick-filters">
+                    <a href="../search.html?all=mouse" class="quick-filter">MOUSE</a>
+                    <a href="../search.html?all=keyboard" class="quick-filter">KEYBOARD</a>
+                    <a href="../search.html?all=superlight" class="quick-filter">SUPERLIGHT</a>
+                </div>
+                <button type="submit" class="search-button">
+                    <img src="../media/search-icon.svg" alt="Search" width="20px">
+                </button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a href="../product_order/cart.html" class="header-icon-link">
+                <span class="icon-text">🛒</span>
+                <span>Сагс <span class="cart-count">(0)</span></span>
+            </a>
+            <a href="../shop_user/login.html" class="header-icon-link">
+                <span class="icon-text">👤</span>
+                <span>Нэвтрэх</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+        <a href="../category/computer.html">Бэлэн Компьютер</a>
+        <a href="../category/pc-build.html">PC Build</a>
+        <a href="../category/offers.html">LVL Up!</a>
+        <a href="../Homepage/about.html">PC Care+</a>
+        <a href="../Homepage/contact-us.html">Холбоо барих</a>
+    </nav>
+
+    <!-- Hero Section / Banner -->
+    <section class="hero-banner">
+        <button class="carousel-prev">‹</button>
+        <div class="banner-content">
+            <div class="banner-slide active">
+                <div class="banner-text">
+                    <h2 class="banner-title">TUF GAMING</h2>
+                    <p class="banner-subtitle">Z890-PLUS WIFI</p>
+                    <a href="../category/products.html" class="banner-button">Дэлгэрэнгүй</a>
+                </div>
+                <div class="banner-image">
+                    <img src="../media/product1.png" alt="Gaming Motherboard" class="banner-product-img">
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-text">
+                    <h2 class="banner-title">AMD RYZEN 9</h2>
+                    <p class="banner-subtitle">7900X High Performance</p>
+                    <a href="../category/products.html" class="banner-button">Дэлгэрэнгүй</a>
+                </div>
+                <div class="banner-image">
+                    <img src="../media/product2.png" alt="AMD Ryzen CPU" class="banner-product-img">
+                </div>
+            </div>
+            <div class="banner-slide">
+                <div class="banner-text">
+                    <h2 class="banner-title">RTX 4090</h2>
+                    <p class="banner-subtitle">Ultimate Gaming Experience</p>
+                    <a href="../category/products.html" class="banner-button">Дэлгэрэнгүй</a>
+                </div>
+                <div class="banner-image">
+                    <img src="../media/product3.png" alt="RTX 4090" class="banner-product-img">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-next">›</button>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <script>
+        // Hero Banner Carousel
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.banner-slide');
+        const dots = document.querySelectorAll('.carousel-dots .dot');
+        const prevBtn = document.querySelector('.carousel-prev');
+        const nextBtn = document.querySelector('.carousel-next');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                showSlide(currentSlide);
+            });
+        });
+
+        // Auto-rotate slides every 5 seconds
+        setInterval(nextSlide, 5000);
+    </script>
+
+    <main class="homepage-main">
+        <div class="homepage-container">
+            <!-- Categories Sidebar -->
+            <aside class="categories-sidebar">
+                <h3>Бүтээгдэхүүний ангилал</h3>
+                <ul class="category-list">
+                    <li><a href="../category/computer.html">💻 Компьютер</a></li>
+                    <li><a href="../category/computer.html">🖥️ Зөөврийн компьютер</a></li>
+                    <li><a href="../category/computer.html">🖱️ Хулгана</a></li>
+                    <li><a href="../category/computer.html">⌨️ Гар</a></li>
+                    <li><a href="../category/computer.html">🎧 Чихэвч</a></li>
+                    <li><a href="../category/computer.html">📱 Цэнэглэгч</a></li>
+                    <li><a href="../category/accessories.html">🔌 Дагалдах хэрэгсэл</a></li>
+                    <li><a href="../category/offers.html">💰 Урамшуулал</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Featured Products -->
+                <section class="product-section">
+                    <div class="section-header">
+                        <h2>Онцлох бүтээгдэхүүн</h2>
+                        <a href="../category/products.html" class="view-all">Бүгдийг харах →</a>
+                    </div>
+                    <div class="product-grid">
+                        <a class="product-link" href="../product/product1-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/product1.png" alt="Intel i5 14400F PC">
+                                <h4>Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition</h4>
+                                <p class="price">Үнэ: 2,920,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product2-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/product2.png" alt="AMD Ryzen 7 7800X3D PC">
+                                <h4>AMD Ryzen 7 7800X3D, MSI B650M PROJECT ZERO</h4>
+                                <p class="price">Үнэ: 6,750,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product4-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/laptop.jpg" alt="Barbie limited edition laptop">
+                                <h4>Охидод зориулсан шинэ загварийн laptop - Barbie edition</h4>
+                                <p class="price">Үнэ: 2,830,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product5-detail.html">
+                            <div class="product-card">
+                                <img src="../media/Pink-retro-computer.jpg" alt="Pink retro computer">
+                                <h4>Ретро загвартай компьютер</h4>
+                                <p class="price">Үнэ: 2,800,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product10-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/product1.png" alt="ASUS ROG Strix XG27AQ">
+                                <h4>ASUS ROG Strix XG27AQ 27" Gaming Monitor</h4>
+                                <p class="price">Үнэ: 1,850,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product11-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/product2.png" alt="Razer BlackWidow V4 Pro">
+                                <h4>Razer BlackWidow V4 Pro Mechanical Keyboard</h4>
+                                <p class="price">Үнэ: 650,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product12-detail.html">
+                            <div class="product-card">
+                                <span class="new-badge-homepage">Шинэ</span>
+                                <img src="../media/product3.png" alt="Logitech G Pro X Superlight 2">
+                                <h4>Logitech G Pro X Superlight 2 Wireless Mouse</h4>
+                                <p class="price">Үнэ: 450,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product13-detail.html">
+                            <div class="product-card">
+                                <img src="../media/laptop.jpg" alt="SteelSeries Arctis Nova Pro">
+                                <h4>SteelSeries Arctis Nova Pro Wireless Gaming Headset</h4>
+                                <p class="price">Үнэ: 1,200,000 ₮</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- New Products -->
+                <section class="product-section">
+                    <div class="section-header">
+                        <h2>Шинэ бүтээгдэхүүн</h2>
+                        <a href="../category/products.html" class="view-all">Бүгдийг харах →</a>
+                    </div>
+                    <div class="product-grid">
+                        <a class="product-link" href="../product/product3-detail.html">
+                            <div class="product-card">
+                                <img src="../media/product3.png" alt="Intel i5 12400F PC">
+                                <h4>Intel - Core i5 12400F, Asus - Dual RTX 5060 8GB OC Edition</h4>
+                                <p class="price">Үнэ: 3,210,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product12-detail.html">
+                            <div class="product-card">
+                                <img src="../media/product3.png" alt="Logitech G Pro X Superlight 2">
+                                <h4>Logitech G Pro X Superlight 2 Wireless Mouse</h4>
+                                <p class="price">Үнэ: 450,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product13-detail.html">
+                            <div class="product-card">
+                                <img src="../media/laptop.jpg" alt="SteelSeries Arctis Nova Pro">
+                                <h4>SteelSeries Arctis Nova Pro Wireless Gaming Headset</h4>
+                                <p class="price">Үнэ: 1,200,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product14-detail.html">
+                            <div class="product-card">
+                                <img src="../media/Pink-retro-computer.jpg" alt="Logitech Brio 4K">
+                                <h4>Logitech Brio 4K Ultra HD Webcam</h4>
+                                <p class="price">Үнэ: 550,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product6-detail.html">
+                            <div class="product-card">
+                                <img src="../media/Tablet-keyboard.jpg" alt="Tablet keyboard">
+                                <h4>Ретро загвартай таблетний keyboard</h4>
+                                <p class="price">Үнэ: 380,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product7-detail.html">
+                            <div class="product-card">
+                                <img src="../media/mouse.jpg" alt="Утасгүй хулгана">
+                                <h4>Frutiger Aero хэв маягийн утасгүй хулгана</h4>
+                                <p class="price">Үнэ: 150,000 ₮</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Discounted Products -->
+                <section class="product-section">
+                    <div class="section-header">
+                        <h2>Хямдралтай бүтээгдэхүүн</h2>
+                        <a href="../category/offers.html" class="view-all">Бүгдийг харах →</a>
+                    </div>
+                    <div class="product-grid">
+                        <a class="product-link" href="../product/product1-detail.html">
+                            <div class="product-card featured-offer">
+                                <span class="discount-badge">5% OFF</span>
+                                <img src="../media/product1.png" alt="Intel i5 14400F PC">
+                                <h4>Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition</h4>
+                                <p class="price-old">2,920,000 ₮</p>
+                                <p class="price">Үнэ: 2,774,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product8-detail.html">
+                            <div class="product-card featured-offer">
+                                <span class="discount-badge">10% OFF</span>
+                                <img src="../media/charger.jpg" alt="Type-C Laptop Charger">
+                                <h4>Type-C цэнэглэгч</h4>
+                                <p class="price-old">38,000 ₮</p>
+                                <p class="price">Үнэ: 34,200 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product9-detail.html">
+                            <div class="product-card featured-offer">
+                                <span class="discount-badge">15% OFF</span>
+                                <img src="../media/razer-kraken-x.jpg" alt="Razer Kraken X">
+                                <h4>Razer Kraken X</h4>
+                                <p class="price-old">680,000 ₮</p>
+                                <p class="price">Үнэ: 578,000 ₮</p>
+                            </div>
+                        </a>
+                        <a class="product-link" href="../product/product11-detail.html">
+                            <div class="product-card featured-offer">
+                                <span class="discount-badge">8% OFF</span>
+                                <img src="../media/product2.png" alt="Razer BlackWidow V4 Pro">
+                                <h4>Razer BlackWidow V4 Pro Mechanical Keyboard</h4>
+                                <p class="price-old">650,000 ₮</p>
+                                <p class="price">Үнэ: 598,000 ₮</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Brands Section -->
+                <section class="brands-section">
+                    <h2 class="brands-title">Брэндүүд</h2>
+                    <div class="brands-grid">
+                        <a href="../category/accessories.html" class="brand-card">
+                            <div class="brand-image dark-bg">
+                                <img src="../media/mouse.jpg" alt="Attack Shark Keyboards">
+                            </div>
+                            <div class="brand-overlay">
+                                <h3 class="brand-name-large">SHARK</h3>
+                                <p class="brand-name-small">ATTACK</p>
+                            </div>
+                        </a>
+                        <a href="../category/accessories.html" class="brand-card">
+                            <div class="brand-image dark-bg">
+                                <img src="../media/razer-kraken-x.jpg" alt="AirPods Pro">
+                            </div>
+                            <div class="brand-overlay">
+                                <h3 class="brand-name-large">AirPods Pro</h3>
+                            </div>
+                        </a>
+                        <a href="../category/accessories.html" class="brand-card">
+                            <div class="brand-image pink-bg">
+                                <img src="../media/razer-kraken-x.jpg" alt="HyperX Headset">
+                            </div>
+                            <div class="brand-overlay">
+                                <h3 class="brand-name-large">HYPERX</h3>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="about.html">Бидний тухай</a> |
+            <a href="faq.html">Асуулт ба хариулт</a> |
+            <a href="our-team.html">Манай баг</a> |
+            <a href="contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <title>Төлбөрийн хуудас | TechStore</title>
+    <meta name="description" content="Төлбөрийн мэдээллээ оруулж захиалгаа баталгаажуулна уу.">
+    <style>
+      .grid-two { display:flex; flex-wrap: wrap; gap: 1rem; }
+      .grid-two > * { flex: 1 1 280px; min-width: 280px; max-width: 100%; }
+      .card { background:#fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem; }
+      .row { display: flex; flex-wrap: wrap; gap: .75rem; }
+      .row > * { flex: 1 1 200px; }
+      .muted { color:#666; font-size:.95rem; }
+      .btn-row { display:flex; gap:.5rem; flex-wrap:wrap; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="../Homepage/index.html"><h1><img src="../logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <form action="../search.html" method="get">
+            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="submit"><img src="../media/search-icon.svg" alt="Search" width="12px"></button>
+        </form>
+        <input type="checkbox" id="nav-toggle" style="display: none;">
+        <label for="nav-toggle" class="hamburger">☰</label>
+        <nav>
+            <a href="../category/products.html">Бүтээгдэхүүн</a>
+            <a href="../category/categories.html">Ангилал</a>
+            <a href="cart.html">Сагс</a>
+            <a href="../shop_user/profile.html">Профайл</a>
+            <a href="../shop_user/login.html">Нэвтрэх</a>
+            <a href="../shop_user/register.html">Бүртгүүлэх</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Төлбөрийн мэдээлэл</h2>
+            <div class="grid-two">
+                <div class="card">
+                    <form action="order-confirm.html" method="post">
+                        <h3>Хүргэлтийн мэдээлэл</h3>
+                        <label for="name">Нэр:</label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
+
+                        <label for="address">Хаяг:</label>
+                        <input type="text" id="address" name="address" autocomplete="address-line1" required>
+
+                        <label for="phone">Утас:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{8}" placeholder="88881234" autocomplete="tel" required>
+
+                        <label for="email">И-мэйл:</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+
+                        <h3>Төлбөрийн хэлбэр</h3>
+                        <label><input type="radio" name="payment" value="card" checked> Кредит/Дебит карт</label>
+                        <label><input type="radio" name="payment" value="bank"> Банкны апп</label>
+
+                        <div id="card-fields" class="card" style="margin-top:.75rem;">
+                            <div class="row">
+                                <div>
+                                    <label for="card-number">Картын дугаар</label>
+                                    <input type="text" id="card-number" name="card-number" inputmode="numeric" placeholder="1234 5678 9012 3456">
+                                </div>
+                                <div>
+                                    <label for="expiry">Дуусах хугацаа</label>
+                                    <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <label for="cvv">CVV</label>
+                                    <input type="password" id="cvv" name="cvv" inputmode="numeric" placeholder="123">
+                                </div>
+                                <div>
+                                    <label for="holder">Карт эзэмшигч</label>
+                                    <input type="text" id="holder" name="holder" placeholder="Овог нэр">
+                                </div>
+                            </div>
+                            <p class="muted">Жич: Энэ бол демо талбар бөгөөд бодит төлбөр хийгдэхгүй.</p>
+                        </div>
+
+                        <div id="bank-fields" class="card" style="margin-top:.75rem; display:none;">
+                            <label><input type="radio" name="bank" value="khaanbank" checked> Khaan Bank</label><br>
+                            <label><input type="radio" name="bank" value="tdb"> TDB</label><br>
+                            <label><input type="radio" name="bank" value="golomt"> Golomt</label>
+                            <p class="muted">Банкны апп-аар баталгаажуулалт хийгдэнэ (демо).</p>
+                        </div>
+
+                        <div class="btn-row" style="margin-top:1rem;">
+                            <button type="reset" style="background:#aaa;">Цуцлах</button>
+                            <button type="submit">Төлбөр төлөх</button>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="card">
+                    <h3>Захиалгын тойм</h3>
+                    <ul>
+                        <li>
+                            <img src="../media/product1.png" alt="Product thumbnail" width="60" style="vertical-align:middle;margin-right:8px;">
+                            Intel - Core i5 14400F (1 ш)
+                        </li>
+                    </ul>
+                    <hr>
+                    <p><strong>Нэгж үнэ:</strong> 2,920,000 ₮</p>
+                    <p><strong>Хүргэлт:</strong> 0 ₮</p>
+                    <p><strong>Нийт:</strong> 2,920,000 ₮</p>
+                    <p class="muted">Үнэ нь демо зорилгоор харуулсан.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="../Homepage/about.html">Бидний тухай</a> |
+            <a href="../Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="../Homepage/our-team.html">Манай баг</a> |
+            <a href="../Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+
+    <script>
+      (function(){
+        const cardRadio = document.querySelector('input[name="payment"][value="card"]');
+        const bankRadio = document.querySelector('input[name="payment"][value="bank"]');
+        const cardFields = document.getElementById('card-fields');
+        const bankFields = document.getElementById('bank-fields');
+        function sync(){
+          const useCard = cardRadio.checked;
+          cardFields.style.display = useCard ? 'block' : 'none';
+          bankFields.style.display = useCard ? 'none' : 'block';
+        }
+        cardRadio.addEventListener('change', sync);
+        bankRadio.addEventListener('change', sync);
+        sync();
+      })();
+    </script>
+</body>
+</html>
+
+

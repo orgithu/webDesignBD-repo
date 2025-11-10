@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>PC Build | TechStore</title>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <input type="checkbox" id="nav-toggle" style="display: none;">
+            <label for="nav-toggle" class="hamburger">☰</label>
+            <a href="../Homepage/index.html" class="logo-link">
+                <img src="../logo.png" alt="TechStore Logo" width="50">
+                <div class="logo-text">
+                    <h1>TechStore</h1>
+                    <p class="logo-tagline">We have tested...</p>
+                </div>
+            </a>
+        </div>
+        <div class="header-center">
+            <form action="../search.html" method="get" class="search-form">
+                <input type="text" name="all" placeholder="Хайлт жишээ нь: RTX 2080" class="search-input">
+                <div class="search-quick-filters">
+                    <a href="../search.html?all=mouse" class="quick-filter">MOUSE</a>
+                    <a href="../search.html?all=keyboard" class="quick-filter">KEYBOARD</a>
+                    <a href="../search.html?all=superlight" class="quick-filter">SUPERLIGHT</a>
+                </div>
+                <button type="submit" class="search-button">
+                    <img src="../media/search-icon.svg" alt="Search" width="20px">
+                </button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a href="../product_order/cart.html" class="header-icon-link">
+                <span class="icon-text">🛒</span>
+                <span>Сагс <span class="cart-count">(0)</span></span>
+            </a>
+            <a href="../shop_user/login.html" class="header-icon-link">
+                <span class="icon-text">👤</span>
+                <span>Нэвтрэх</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+        <a href="computer.html">Бэлэн Компьютер</a>
+        <a href="pc-build.html">PC Build</a>
+        <a href="offers.html">LVL Up!</a>
+        <a href="../Homepage/about.html">PC Care+</a>
+        <a href="../Homepage/contact-us.html">Холбоо барих</a>
+    </nav>
+
+    <main>
+      <section class="pc-build-container">
+        <div class="build-layout">
+          <!-- Left Sidebar -->
+          <aside class="build-sidebar">
+            <div class="component-category" data-category="case">
+              <div class="component-header">
+                <h3>Case</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-case">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category active" data-category="cpu">
+              <div class="component-header">
+                <h3>CPU</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-cpu">
+                <span class="component-name">AMD - Ryzen 7 9700X NoBox</span>
+                <img src="../media/product2.png" alt="CPU" class="component-img" width="40">
+              </div>
+            </div>
+
+            <div class="component-category highlighted" data-category="motherboard">
+              <div class="component-header">
+                <h3>Motherboard</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-motherboard">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="memory">
+              <div class="component-header">
+                <h3>Memory</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-memory">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="storage">
+              <div class="component-header">
+                <h3>Storage</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-storage">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="graphic-card">
+              <div class="component-header">
+                <h3>Graphic Card</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-graphic-card">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="cpu-cooler">
+              <div class="component-header">
+                <h3>CPU Cooler</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-cpu-cooler">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="power-supply">
+              <div class="component-header">
+                <h3>Power Supply</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-power-supply">
+                <span class="dash">-</span>
+              </div>
+            </div>
+
+            <div class="component-category" data-category="case-fan">
+              <div class="component-header">
+                <h3>Case Fan</h3>
+                <img src="../logo.png" alt="TechStore" class="category-logo" width="20">
+              </div>
+              <div class="selected-component" id="selected-case-fan">
+                <span class="dash">-</span>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main Content -->
+          <div class="build-main-content">
+            <div class="products-header">
+              <h2 class="products-count">27 Тохирох бараа</h2>
+              <div class="sort-container">
+                <select class="sort-select" id="sort-select">
+                  <option value="newest">Шинэ нь эхэнд</option>
+                  <option value="price-low">Үнэ: Багаас их рүү</option>
+                  <option value="price-high">Үнэ: Ихээс бага руу</option>
+                  <option value="name">Нэр: А-Я</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="filter-tags-container">
+              <span class="filter-label">Түлхүүр үг:</span>
+              <div class="filter-tags" id="filter-tags">
+                <!-- Filter tags will be loaded dynamically -->
+              </div>
+              <button class="clear-filters-btn" id="clear-filters">Шүүлтүүр цэвэрлэх</button>
+            </div>
+
+            <div class="build-products-grid" id="products-grid">
+              <!-- Products will be loaded dynamically via JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Build Summary (Fixed at bottom) -->
+        <div class="build-summary-fixed">
+          <div class="summary-info">
+            <span>Сонгосон хэсгүүд: <strong id="selected-count">1</strong></span>
+            <span class="total-price-text">Нийт үнэ: <strong id="total-price">0</strong> ₮</span>
+          </div>
+          <button class="build-button">Сагсанд нэмэх</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="../Homepage/about.html">Бидний тухай</a> |
+            <a href="../Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="../Homepage/our-team.html">Манай баг</a> |
+            <a href="../Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Component selection
+        const componentCategories = document.querySelectorAll('.component-category');
+        const selectedComponents = {};
+        let totalPrice = 0;
+
+        // Products data for each category
+        const productsData = {
+            'case': [
+                { id: 'case-1', name: 'Corsair 3000D AIRFLOW Case', price: 450000, img: '../media/Pink-retro-computer.jpg', filters: 'atx,mid-tower' },
+                { id: 'case-2', name: 'NZXT H5 Flow RGB', price: 550000, img: '../media/product1.png', filters: 'atx,mid-tower,rgb' },
+                { id: 'case-3', name: 'Fractal Design Meshify 2', price: 600000, img: '../media/product2.png', filters: 'atx,mid-tower' },
+                { id: 'case-4', name: 'Lian Li O11 Dynamic EVO', price: 750000, img: '../media/product3.png', filters: 'atx,mid-tower,rgb' },
+                { id: 'case-5', name: 'Phanteks Eclipse P400A', price: 480000, img: '../media/product1.png', filters: 'atx,mid-tower' },
+                { id: 'case-6', name: 'Cooler Master MasterBox TD500', price: 520000, img: '../media/product2.png', filters: 'atx,mid-tower,rgb' },
+                { id: 'case-7', name: 'be quiet! Pure Base 500DX', price: 580000, img: '../media/product3.png', filters: 'atx,mid-tower' },
+                { id: 'case-8', name: 'Fractal Design Define 7', price: 650000, img: '../media/product1.png', filters: 'atx,mid-tower' },
+                { id: 'case-9', name: 'Corsair 4000D Airflow White', price: 520000, img: '../media/product2.png', filters: 'atx,mid-tower' },
+                { id: 'case-10', name: 'NZXT H7 Flow RGB', price: 680000, img: '../media/product3.png', filters: 'atx,mid-tower,rgb' }
+            ],
+            'cpu': [
+                { id: 'cpu-1', name: 'AMD - Ryzen 7 9700X NoBox', price: 1850000, img: '../media/product2.png', filters: 'amd,am5' },
+                { id: 'cpu-2', name: 'Intel Core i5 14400F', price: 850000, img: '../media/product1.png', filters: 'intel,1700' },
+                { id: 'cpu-3', name: 'Intel Core i5 12400F', price: 650000, img: '../media/product3.png', filters: 'intel,1700' },
+                { id: 'cpu-4', name: 'AMD Ryzen 9 7900X', price: 2200000, img: '../media/product1.png', filters: 'amd,am5' },
+                { id: 'cpu-5', name: 'Intel Core i7 13700K', price: 1500000, img: '../media/product2.png', filters: 'intel,1700' },
+                { id: 'cpu-6', name: 'AMD Ryzen 5 7600X', price: 1200000, img: '../media/product3.png', filters: 'amd,am5' },
+                { id: 'cpu-7', name: 'AMD Ryzen 7 7800X3D', price: 1950000, img: '../media/product1.png', filters: 'amd,am5' },
+                { id: 'cpu-8', name: 'Intel Core i9 14900K', price: 2800000, img: '../media/product2.png', filters: 'intel,1700' }
+            ],
+            'motherboard': [
+                { id: 'mb-1', name: 'Asus - Prime B760M-K DDR5', price: 400000, img: '../media/product1.png', filters: 'ddr5,1700,atx,1-pcie' },
+                { id: 'mb-2', name: 'Asrock - B760M-H2/M.2', price: 300000, img: '../media/product2.png', filters: 'ddr5,1700,m-atx,1-pcie' },
+                { id: 'mb-3', name: 'Asus - Prime Z790-P DDR5 Nobox /used/', price: 600000, img: '../media/product3.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-4', name: 'ASUS - TUF GAMING Z890-PLUS WIFI', price: 850000, img: '../media/product1.png', filters: 'ddr5,am5,atx,2-pcie' },
+                { id: 'mb-5', name: 'MSI - B650M PROJECT ZERO', price: 750000, img: '../media/product2.png', filters: 'ddr5,am5,m-atx,1-pcie' },
+                { id: 'mb-6', name: 'Gigabyte - B760M DS3H DDR4', price: 350000, img: '../media/product3.png', filters: 'ddr4,1700,m-atx,1-pcie' },
+                { id: 'mb-7', name: 'Asus ROG Strix B550-F Gaming', price: 650000, img: '../media/product1.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-8', name: 'MSI MAG B550 Tomahawk', price: 600000, img: '../media/product2.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-9', name: 'Gigabyte Z690 Aorus Elite', price: 900000, img: '../media/product3.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-10', name: 'ASRock B660M Pro RS', price: 380000, img: '../media/product1.png', filters: 'ddr4,1700,m-atx,1-pcie' },
+                { id: 'mb-11', name: 'Asus Prime X570-P', price: 700000, img: '../media/product2.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-12', name: 'MSI B450 Tomahawk Max', price: 450000, img: '../media/product3.png', filters: 'ddr4,am5,atx,1-pcie' },
+                { id: 'mb-13', name: 'Gigabyte B650 Aorus Elite AX', price: 800000, img: '../media/product1.png', filters: 'ddr5,am5,atx,2-pcie' },
+                { id: 'mb-14', name: 'ASRock Z790 Taichi', price: 1200000, img: '../media/product2.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-15', name: 'Asus ROG Strix X570-E', price: 950000, img: '../media/product3.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-16', name: 'MSI Z690-A Pro', price: 720000, img: '../media/product1.png', filters: 'ddr5,1700,atx,1-pcie' },
+                { id: 'mb-17', name: 'Gigabyte B550M DS3H', price: 420000, img: '../media/product2.png', filters: 'ddr4,am5,m-atx,1-pcie' },
+                { id: 'mb-18', name: 'ASRock B450M Pro4', price: 380000, img: '../media/product3.png', filters: 'ddr4,am5,m-atx,1-pcie' },
+                { id: 'mb-19', name: 'Asus Prime H610M-E', price: 320000, img: '../media/product1.png', filters: 'ddr4,1700,m-atx,1-pcie' },
+                { id: 'mb-20', name: 'MSI B560M Pro-VDH', price: 400000, img: '../media/product2.png', filters: 'ddr4,1700,m-atx,1-pcie' },
+                { id: 'mb-21', name: 'Gigabyte Z790 Gaming X', price: 880000, img: '../media/product3.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-22', name: 'ASRock B650M Pro4', price: 680000, img: '../media/product1.png', filters: 'ddr5,am5,m-atx,1-pcie' },
+                { id: 'mb-23', name: 'Asus TUF Gaming B550-Plus', price: 620000, img: '../media/product2.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-24', name: 'MSI MPG Z790 Carbon', price: 1100000, img: '../media/product3.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-25', name: 'Gigabyte B650M Aorus Pro', price: 780000, img: '../media/product1.png', filters: 'ddr5,am5,m-atx,1-pcie' },
+                { id: 'mb-26', name: 'ASRock Z690 Phantom Gaming', price: 980000, img: '../media/product2.png', filters: 'ddr5,1700,atx,2-pcie' },
+                { id: 'mb-27', name: 'Asus Prime B550M-A', price: 480000, img: '../media/product3.png', filters: 'ddr4,am5,m-atx,1-pcie' },
+                { id: 'mb-28', name: 'MSI B550 Gaming Edge WIFI', price: 680000, img: '../media/product1.png', filters: 'ddr4,am5,atx,2-pcie' },
+                { id: 'mb-29', name: 'Gigabyte X670E Aorus Master', price: 1250000, img: '../media/product2.png', filters: 'ddr5,am5,atx,2-pcie' }
+            ],
+            'memory': [
+                { id: 'ram-1', name: 'Corsair Vengeance DDR5 16GB (2x8GB)', price: 250000, img: '../media/product1.png', filters: 'ddr5,16gb' },
+                { id: 'ram-2', name: 'Corsair Vengeance DDR5 32GB (2x16GB)', price: 450000, img: '../media/product2.png', filters: 'ddr5,32gb' },
+                { id: 'ram-3', name: 'Kingston FURY DDR4 16GB (2x8GB)', price: 200000, img: '../media/product3.png', filters: 'ddr4,16gb' },
+                { id: 'ram-4', name: 'G.Skill Trident Z5 DDR5 32GB', price: 480000, img: '../media/product1.png', filters: 'ddr5,32gb' },
+                { id: 'ram-5', name: 'Kingston FURY Beast DDR4 32GB', price: 380000, img: '../media/product2.png', filters: 'ddr4,32gb' },
+                { id: 'ram-6', name: 'Corsair Dominator DDR5 64GB', price: 950000, img: '../media/product3.png', filters: 'ddr5,64gb' },
+                { id: 'ram-7', name: 'G.Skill Ripjaws V DDR4 32GB', price: 350000, img: '../media/product1.png', filters: 'ddr4,32gb' },
+                { id: 'ram-8', name: 'Corsair Vengeance RGB DDR5 32GB', price: 520000, img: '../media/product2.png', filters: 'ddr5,32gb' }
+            ],
+            'storage': [
+                { id: 'ssd-1', name: 'Samsung 980 PRO 1TB NVMe SSD', price: 450000, img: '../media/product1.png', filters: 'nvme,1tb' },
+                { id: 'ssd-2', name: 'Samsung 980 PRO 2TB NVMe SSD', price: 750000, img: '../media/product2.png', filters: 'nvme,2tb' },
+                { id: 'ssd-3', name: 'WD Black SN850X 1TB NVMe SSD', price: 480000, img: '../media/product3.png', filters: 'nvme,1tb' },
+                { id: 'ssd-4', name: 'Crucial P5 Plus 1TB NVMe', price: 420000, img: '../media/product1.png', filters: 'nvme,1tb' },
+                { id: 'ssd-5', name: 'Samsung 970 EVO Plus 2TB', price: 720000, img: '../media/product2.png', filters: 'nvme,2tb' },
+                { id: 'ssd-6', name: 'Kingston NV2 1TB NVMe', price: 380000, img: '../media/product3.png', filters: 'nvme,1tb' },
+                { id: 'ssd-7', name: 'Samsung 990 PRO 2TB NVMe SSD', price: 820000, img: '../media/product1.png', filters: 'nvme,2tb' },
+                { id: 'ssd-8', name: 'WD Blue SN580 1TB NVMe', price: 350000, img: '../media/product2.png', filters: 'nvme,1tb' }
+            ],
+            'graphic-card': [
+                { id: 'gpu-1', name: 'Asus Dual RTX 5060 8GB OC Edition', price: 1200000, img: '../media/product1.png', filters: 'nvidia,rtx5060,rtx-5060' },
+                { id: 'gpu-2', name: 'Zotac RTX 4070 SUPER', price: 3500000, img: '../media/product2.png', filters: 'nvidia,rtx4070,rtx-4070' },
+                { id: 'gpu-3', name: 'AMD Radeon RX 7800 XT', price: 2800000, img: '../media/product3.png', filters: 'amd,rx7800,rx-7800' },
+                { id: 'gpu-4', name: 'MSI RTX 4060 Ti', price: 1800000, img: '../media/product1.png', filters: 'nvidia,rtx4060,rtx-4060' },
+                { id: 'gpu-5', name: 'Sapphire RX 7700 XT', price: 2400000, img: '../media/product2.png', filters: 'amd,rx7700,rx-7700' },
+                { id: 'gpu-6', name: 'Gigabyte RTX 4080 SUPER', price: 4800000, img: '../media/product3.png', filters: 'nvidia,rtx4080,rtx-4080' },
+                { id: 'gpu-7', name: 'ASUS ROG Strix RTX 4090', price: 6500000, img: '../media/product1.png', filters: 'nvidia,rtx4090' },
+                { id: 'gpu-8', name: 'XFX Speedster RX 7900 XTX', price: 5200000, img: '../media/product2.png', filters: 'amd,rx7900' }
+            ],
+            'cpu-cooler': [
+                { id: 'cooler-1', name: 'Noctua NH-D15 Chromax Black', price: 450000, img: '../media/product1.png', filters: 'air-cooler,dual-tower' },
+                { id: 'cooler-2', name: 'Corsair H100i RGB Elite', price: 650000, img: '../media/product2.png', filters: 'aio,240mm,rgb' },
+                { id: 'cooler-3', name: 'Deepcool AK620', price: 320000, img: '../media/product3.png', filters: 'air-cooler,dual-tower' },
+                { id: 'cooler-4', name: 'NZXT Kraken X63', price: 720000, img: '../media/product1.png', filters: 'aio,280mm' },
+                { id: 'cooler-5', name: 'be quiet! Dark Rock Pro 4', price: 480000, img: '../media/product2.png', filters: 'air-cooler,dual-tower' },
+                { id: 'cooler-6', name: 'Arctic Liquid Freezer II 360', price: 580000, img: '../media/product3.png', filters: 'aio,360mm' },
+                { id: 'cooler-7', name: 'Corsair H150i Elite Capellix', price: 850000, img: '../media/product1.png', filters: 'aio,360mm,rgb' },
+                { id: 'cooler-8', name: 'Thermalright Peerless Assassin 120', price: 280000, img: '../media/product2.png', filters: 'air-cooler,dual-tower' }
+            ],
+            'power-supply': [
+                { id: 'psu-1', name: 'Corsair RM750e 750W 80+ Gold', price: 450000, img: '../media/product1.png', filters: '750w,gold,modular' },
+                { id: 'psu-2', name: 'Corsair RM850e 850W 80+ Gold', price: 550000, img: '../media/product2.png', filters: '850w,gold,modular' },
+                { id: 'psu-3', name: 'Seasonic Focus GX-750 750W', price: 480000, img: '../media/product3.png', filters: '750w,gold,modular' },
+                { id: 'psu-4', name: 'EVGA SuperNOVA 1000W 80+ Gold', price: 750000, img: '../media/product1.png', filters: '1000w,gold,modular' },
+                { id: 'psu-5', name: 'be quiet! Straight Power 11 850W', price: 620000, img: '../media/product2.png', filters: '850w,platinum,modular' },
+                { id: 'psu-6', name: 'Thermaltake Toughpower GF1 750W', price: 420000, img: '../media/product3.png', filters: '750w,gold,modular' },
+                { id: 'psu-7', name: 'Corsair HX1000i 1000W 80+ Platinum', price: 980000, img: '../media/product1.png', filters: '1000w,platinum,modular' },
+                { id: 'psu-8', name: 'Seasonic Prime TX-850 850W 80+ Titanium', price: 1150000, img: '../media/product2.png', filters: '850w,titanium,modular' }
+            ],
+            'case-fan': [
+                { id: 'fan-1', name: 'Noctua NF-A12x25 PWM', price: 85000, img: '../media/product1.png', filters: '120mm,pwm' },
+                { id: 'fan-2', name: 'Corsair LL120 RGB 3-Pack', price: 280000, img: '../media/product2.png', filters: '120mm,rgb,3-pack' },
+                { id: 'fan-3', name: 'Arctic P12 PWM PST 5-Pack', price: 120000, img: '../media/product3.png', filters: '120mm,pwm,5-pack' },
+                { id: 'fan-4', name: 'Lian Li UNI FAN SL120 V2', price: 350000, img: '../media/product1.png', filters: '120mm,rgb,3-pack' },
+                { id: 'fan-5', name: 'be quiet! Silent Wings 3 140mm', price: 95000, img: '../media/product2.png', filters: '140mm,pwm' },
+                { id: 'fan-6', name: 'Cooler Master MasterFan MF120', price: 150000, img: '../media/product3.png', filters: '120mm,rgb,3-pack' },
+                { id: 'fan-7', name: 'Corsair QL120 RGB 3-Pack', price: 320000, img: '../media/product1.png', filters: '120mm,rgb,3-pack' },
+                { id: 'fan-8', name: 'Arctic F14 PWM PST 5-Pack', price: 140000, img: '../media/product2.png', filters: '140mm,pwm,5-pack' }
+            ]
+        };
+
+        // Category click handler
+        componentCategories.forEach(category => {
+            category.addEventListener('click', function() {
+                componentCategories.forEach(c => {
+                    c.classList.remove('active', 'highlighted');
+                });
+                this.classList.add('active', 'highlighted');
+                
+                const categoryType = this.dataset.category;
+                loadProductsForCategory(categoryType);
+            });
+        });
+
+        function loadProductsForCategory(categoryType) {
+            const products = productsData[categoryType] || [];
+            const grid = document.getElementById('products-grid');
+            
+            // Update filter tags based on category
+            updateFilterTags(categoryType);
+            
+            // Clear current products
+            grid.innerHTML = '';
+            
+            // Update count
+            document.querySelector('.products-count').textContent = `${products.length} Тохирох бараа`;
+            
+            // Add products
+            products.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'build-product-card';
+                card.dataset.product = product.id;
+                card.dataset.filters = product.filters;
+                
+                card.innerHTML = `
+                    <img src="${product.img}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <span class="new-badge">Шинэ</span>
+                        <h4 class="product-title">${product.name}</h4>
+                        <p class="product-price">Үнэ: ${product.price.toLocaleString()}₮</p>
+                        <button class="select-btn" data-price="${product.price}" data-name="${product.name}" data-img="${product.img}">Сонгох</button>
+                    </div>
+                `;
+                
+                // Add select button handler
+                const selectBtn = card.querySelector('.select-btn');
+                selectBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    handleProductSelection(categoryType, product);
+                });
+                
+                grid.appendChild(card);
+            });
+        }
+
+        function updateFilterTags(categoryType) {
+            // Update filter tags based on category
+            const filterContainer = document.getElementById('filter-tags');
+            filterContainer.innerHTML = '';
+            
+            const filters = {
+                'motherboard': ['DDR4', 'DDR5', '1700', 'AM5', 'ATX', 'M-ATX', 'ITX', '1-PCIE', '2-PCIE'],
+                'cpu': ['AMD', 'Intel', 'AM5', '1700'],
+                'memory': ['DDR4', 'DDR5', '16GB', '32GB', '64GB'],
+                'storage': ['NVMe', 'SATA', '1TB', '2TB'],
+                'graphic-card': ['NVIDIA', 'AMD', 'RTX-5060', 'RTX-4070', 'RTX-4060', 'RTX-4080', 'RTX-4090', 'RX-7700', 'RX-7800', 'RX-7900'],
+                'case': ['ATX', 'M-ATX', 'Mini-ITX', 'RGB'],
+                'cpu-cooler': ['Air-Cooler', 'AIO', '120mm', '240mm', '280mm', '360mm', 'RGB'],
+                'power-supply': ['750W', '850W', '1000W', 'Gold', 'Platinum', 'Titanium', 'Modular'],
+                'case-fan': ['120mm', '140mm', 'PWM', 'RGB', '3-Pack', '5-Pack']
+            };
+            
+            const categoryFilters = filters[categoryType] || [];
+            categoryFilters.forEach(filter => {
+                const tag = document.createElement('button');
+                tag.className = 'filter-tag';
+                tag.textContent = filter;
+                const filterValue = filter.toLowerCase().replace(/\s+/g, '-');
+                tag.dataset.filter = filterValue;
+                tag.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    const filterKey = this.dataset.filter;
+                    
+                    if (this.classList.contains('active')) {
+                        if (!activeFilters.includes(filterKey)) {
+                            activeFilters.push(filterKey);
+                        }
+                    } else {
+                        activeFilters = activeFilters.filter(f => f !== filterKey);
+                    }
+                    
+                    applyFilters();
+                });
+                filterContainer.appendChild(tag);
+            });
+            
+            activeFilters = [];
+            applyFilters();
+        }
+
+        function handleProductSelection(categoryType, product) {
+            const selectedDiv = document.getElementById(`selected-${categoryType}`);
+            
+            // Update selected component
+            selectedDiv.innerHTML = `
+                <span class="component-name">${product.name}</span>
+                <img src="${product.img}" alt="${product.name}" class="component-img" width="40">
+            `;
+            
+            // Update selected components object
+            if (selectedComponents[categoryType]) {
+                totalPrice -= selectedComponents[categoryType].price;
+            }
+            selectedComponents[categoryType] = {
+                name: product.name,
+                price: product.price,
+                img: product.img
+            };
+            totalPrice += product.price;
+            
+            // Update UI
+            updateSummary();
+            
+            // Highlight selected button
+            document.querySelectorAll('.select-btn').forEach(b => b.classList.remove('selected'));
+            const selectBtn = document.querySelector(`[data-name="${product.name}"]`);
+            if (selectBtn) {
+                selectBtn.classList.add('selected');
+            }
+        }
+
+        // Filter tags
+        let activeFilters = [];
+
+        function applyFilters() {
+            const products = document.querySelectorAll('.build-product-card');
+            let visibleCount = 0;
+            
+            if (activeFilters.length === 0) {
+                products.forEach(product => {
+                    product.style.display = 'block';
+                    visibleCount++;
+                });
+            } else {
+                products.forEach(product => {
+                    const productFilters = product.dataset.filters.split(',');
+                    const matches = activeFilters.every(filter => {
+                        return productFilters.some(pf => {
+                            const pfNormalized = pf.trim().toLowerCase();
+                            const filterNormalized = filter.toLowerCase();
+                            return pfNormalized === filterNormalized || 
+                                   pfNormalized.includes(filterNormalized) ||
+                                   filterNormalized.includes(pfNormalized) ||
+                                   (filterNormalized === '1-pcie' && pfNormalized.includes('1-pcie')) ||
+                                   (filterNormalized === '2-pcie' && pfNormalized.includes('2-pcie'));
+                        });
+                    });
+                    
+                    if (matches) {
+                        product.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+            
+            document.querySelector('.products-count').textContent = `${visibleCount} Тохирох бараа`;
+        }
+
+        // Clear filters
+        document.getElementById('clear-filters').addEventListener('click', function() {
+            activeFilters = [];
+            document.querySelectorAll('.filter-tag').forEach(tag => {
+                tag.classList.remove('active');
+            });
+            applyFilters();
+        });
+
+        // Sort functionality
+        document.getElementById('sort-select').addEventListener('change', function() {
+            const sortValue = this.value;
+            const products = Array.from(document.querySelectorAll('.build-product-card:not([style*="display: none"])'));
+            const grid = document.getElementById('products-grid');
+            
+            products.sort((a, b) => {
+                if (sortValue === 'price-low') {
+                    const priceA = parseInt(a.querySelector('.select-btn').dataset.price);
+                    const priceB = parseInt(b.querySelector('.select-btn').dataset.price);
+                    return priceA - priceB;
+                } else if (sortValue === 'price-high') {
+                    const priceA = parseInt(a.querySelector('.select-btn').dataset.price);
+                    const priceB = parseInt(b.querySelector('.select-btn').dataset.price);
+                    return priceB - priceA;
+                } else if (sortValue === 'name') {
+                    const nameA = a.querySelector('.product-title').textContent;
+                    const nameB = b.querySelector('.product-title').textContent;
+                    return nameA.localeCompare(nameB);
+                }
+                return 0;
+            });
+            
+            products.forEach(product => grid.appendChild(product));
+        });
+
+        function updateSummary() {
+            const count = Object.keys(selectedComponents).length;
+            document.getElementById('selected-count').textContent = count;
+            document.getElementById('total-price').textContent = totalPrice.toLocaleString();
+        }
+
+        // Initialize with motherboard category
+        loadProductsForCategory('motherboard');
+        
+        // Set initial CPU selection
+        const initialCpu = productsData.cpu[0];
+        selectedComponents['cpu'] = {
+            name: initialCpu.name,
+            price: initialCpu.price,
+            img: initialCpu.img
+        };
+        totalPrice = initialCpu.price;
+        document.getElementById('selected-cpu').innerHTML = `
+            <span class="component-name">${initialCpu.name}</span>
+            <img src="${initialCpu.img}" alt="${initialCpu.name}" class="component-img" width="40">
+        `;
+        updateSummary();
+        
+        // Add to cart button
+        document.querySelector('.build-button').addEventListener('click', function() {
+            const selectedCount = Object.keys(selectedComponents).length;
+            if (selectedCount === 0) {
+                alert('Ядаж нэг хэсэг сонгоно уу!');
+                return;
+            }
+            // Redirect to cart page with selected components
+            window.location.href = '../product_order/cart.html';
+        });
+    </script>
+</body>
+</html>

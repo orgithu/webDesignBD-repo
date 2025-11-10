@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <title>Дагалдах хэрэгсэл | TechStore</title>
+</head>
+<body>
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <input type="checkbox" id="nav-toggle" style="display: none;">
+            <label for="nav-toggle" class="hamburger">☰</label>
+            <a href="../Homepage/index.html" class="logo-link">
+                <img src="../logo.png" alt="TechStore Logo" width="50">
+                <div class="logo-text">
+                    <h1>TechStore</h1>
+                    <p class="logo-tagline">We have tested...</p>
+                </div>
+            </a>
+        </div>
+        <div class="header-center">
+            <form action="../search.html" method="get" class="search-form">
+                <input type="text" name="all" placeholder="Хайлт жишээ нь: RTX 2080" class="search-input">
+                <div class="search-quick-filters">
+                    <a href="../search.html?all=mouse" class="quick-filter">MOUSE</a>
+                    <a href="../search.html?all=keyboard" class="quick-filter">KEYBOARD</a>
+                    <a href="../search.html?all=superlight" class="quick-filter">SUPERLIGHT</a>
+                </div>
+                <button type="submit" class="search-button">
+                    <img src="../media/search-icon.svg" alt="Search" width="20px">
+                </button>
+            </form>
+        </div>
+        <div class="header-right">
+            <a href="../product_order/cart.html" class="header-icon-link">
+                <span class="icon-text">🛒</span>
+                <span>Сагс <span class="cart-count">(0)</span></span>
+            </a>
+            <a href="../shop_user/login.html" class="header-icon-link">
+                <span class="icon-text">👤</span>
+                <span>Нэвтрэх</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Navigation Bar -->
+    <nav class="main-nav">
+        <a href="computer.html">Бэлэн Компьютер</a>
+        <a href="pc-build.html">PC Build</a>
+        <a href="offers.html">LVL Up!</a>
+        <a href="../Homepage/about.html">PC Care+</a>
+        <a href="../Homepage/contact-us.html">Холбоо барих</a>
+    </nav>
+
+    <main>
+      <section class="product-list">
+        <h2>Хэрэглэгчийн хэрэгслүүд</h2>
+        <div class="product-grid">
+          <div class="product-card">
+          <a href="../product/product6-detail.html" class="product-link">
+            <img src="../media/Tablet-keyboard.jpg" alt="Tablet Keyboard" height="300">
+            <h3>Intel - Core i5 12400F , Asus - Dual RTX 5060 8GB OC Edition , Corsair 3000D AIRFLOW Case</h3>
+            <p>Үнэ: 380'000 ₮</p>
+          </a>
+          </div>
+          <div class="product-card">
+            <a href="../product/product7-detail.html" class="product-link">
+            <img src="../media/mouse.jpg" alt="Mouse" height="300">
+            <h3>Frutiger aero style mouse</h3>
+            <p>Үнэ: 120,000₮</p>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="../product/product8-detail.html" class="product-link">
+            <img src="../media/charger.jpg" alt="Charger" height="300">
+            <h3>Type-C Laptop Charger</h3>
+            <p>Үнэ: 85,000₮</p>
+            </a>
+          </div>
+          <div class="product-card">
+            <a href="../product/product9-detail.html" class="product-link">
+            <img src="../media/razer-kraken-x.jpg" alt="Headset" height="300">
+            <h3>Razer Kraken X</h3>
+            <p>Үнэ: 220,000₮</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="../Homepage/about.html">Бидний тухай</a> |
+            <a href="../Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="../Homepage/our-team.html">Манай баг</a> |
+            <a href="../Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+</body>
+</html>

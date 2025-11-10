@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <title>Захиалга батлагдсан | TechStore</title>
+    <meta name="description" content="Таны захиалга амжилттай хийгдсэн. Захиалгын мэдээллийг эндээс харна уу.">
+</head>
+<body>
+    <header>
+        <a href="../Homepage/index.html"><h1><img src="../logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <form action="../search.html" method="get">
+            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="submit"><img src="../media/search-icon.svg" alt="Search" width="12px"></button>
+        </form>
+        <input type="checkbox" id="nav-toggle" style="display: none;">
+        <label for="nav-toggle" class="hamburger">☰</label>
+        <nav>
+            <a href="../category/products.html">Бүтээгдэхүүн</a>
+            <a href="../category/categories.html">Ангилал</a>
+            <a href="cart.html">Сагс</a>
+            <a href="../shop_user/profile.html">Профайл</a>
+            <a href="../shop_user/login.html">Нэвтрэх</a>
+            <a href="../shop_user/register.html">Бүртгүүлэх</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Худалдан авалт хийсэнд баярлалаа</h2>
+        <p>Худалдан авсан бүтээгдэхүүн:</p>
+        <ul>
+            <li>
+                <a href="../product/product1-detail.html">
+                    <img src="../media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
+                    Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
+                </a>
+            </li>
+        </ul>
+        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#123456</strong></p>
+        <p>Холбоо барих дугаар: 99991121</p>
+        <p>E-Barimt г таны и-мэйл хаягаар илгээсэн.</p>
+        <section>
+            <h3>Хүргэлтийн мэдээлэл</h3>
+            <p>Нэр: NAME</p>
+            <p>Хаяг: ADDRESS</p>
+            <p>Утас: PHONE</p>
+            <p>И-мэйл: EMAIL</p>
+        </section>
+
+        <section>
+            <h3>Төлбөрийн мэдээлэл</h3>
+            <p>Төлбөрийн хэлбэр: Карт</p>
+            <p>Төлөв: Амжилттай</p>
+        </section>
+        <section>
+            <h3>Хянах</h3>
+            <p>Та захиалгын явцыг доорх товчоор хянаж болно:</p>
+            <form action="order-tracking.html" method="get">
+                <button type="submit">Захиалга хянах</button>
+            </form>
+            <p>Хүргэлт хүлээгдэж буй огноо: 2025-11-04</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="../Homepage/about.html">Бидний тухай</a> |
+            <a href="../Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="../Homepage/our-team.html">Манай баг</a> |
+            <a href="../Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+</body>
+</html>
+

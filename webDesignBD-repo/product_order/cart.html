@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <title>Сагс | TechStore</title>
+    <meta name="description" content="Таны сагс - TechStore. Хэрэглэхэд хялбар захиалга, үнэгүй угсралт ба хүргэлт.">
+</head>
+<body>
+    <header>
+        <a href="../Homepage/index.html"><h1><img src="../logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
+        <form action="../search.html" method="get">
+            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
+            <button type="submit"><img src="../media/search-icon.svg" alt="Search" width="12px"></button>
+        </form>
+        <input type="checkbox" id="nav-toggle" style="display: none;">
+        <label for="nav-toggle" class="hamburger">☰</label>
+        <nav>
+            <a href="../category/products.html">Бүтээгдэхүүн</a>
+            <a href="../category/categories.html">Ангилал</a>
+            <a href="cart.html">Сагс</a>
+            <a href="../shop_user/profile.html">Профайл</a>
+            <a href="../shop_user/login.html">Нэвтрэх</a>
+            <a href="../shop_user/register.html">Бүртгүүлэх</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Сагсанд байгаа бүтээгдэхүүнүүд</h2>
+            
+            <!-- Нэмэх боломжтой бүтээгдэхүүнүүд (нуугдсан) -->
+            <div class="add-product-section">
+                <h3>Сагсанд нэмэх</h3>
+                <div class="add-product-toggle">
+                    <input type="checkbox" id="show-add-products" class="toggle-checkbox">
+                    <label for="show-add-products" class="toggle-label">+ Бүтээгдэхүүн нэмэх</label>
+                    <div class="add-products-list">
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-3" class="add-product-checkbox">
+                            <label for="add-product-3" class="add-product-card">
+                                <img src="../media/product2.png" alt="Product 2" width="80">
+                                <div class="add-product-info">
+                                    <h4>AMD Ryzen 7 7800X3D, MSI B650M PROJECT ZERO, Zotac RTX 4070 SUPER</h4>
+                                    <p class="cart-item-price">Үнэ: 6,750,000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-4" class="add-product-checkbox">
+                            <label for="add-product-4" class="add-product-card">
+                                <img src="../media/product3.png" alt="Product 3" width="80">
+                                <div class="add-product-info">
+                                    <h4>Intel - Core i5 12400F, Asus - Dual RTX 5060 8GB OC Edition</h4>
+                                    <p class="cart-item-price">Үнэ: 3,210,000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-5" class="add-product-checkbox">
+                            <label for="add-product-5" class="add-product-card">
+                                <img src="../media/laptop.jpg" alt="Product 4" width="80">
+                                <div class="add-product-info">
+                                    <h4>Охидод зориулсан шинэ загварийн laptop-Barbie edition</h4>
+                                    <p class="cart-item-price">Үнэ: 2,830,000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-6" class="add-product-checkbox">
+                            <label for="add-product-6" class="add-product-card">
+                                <img src="../media/Pink-retro-computer.jpg" alt="Product 5" width="80">
+                                <div class="add-product-info">
+                                    <h4>Хүчирхэг суурин компьютер</h4>
+                                    <p class="cart-item-price">Үнэ: 2'800'000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-8" class="add-product-checkbox">
+                            <label for="add-product-8" class="add-product-card">
+                                <img src="../media/charger.jpg" alt="Product 8" width="80">
+                                <div class="add-product-info">
+                                    <h4>Type-c цэнэглэгч</h4>
+                                    <p class="cart-item-price">Үнэ: 38,000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                        <div class="add-product-item">
+                            <input type="checkbox" id="add-product-9" class="add-product-checkbox">
+                            <label for="add-product-9" class="add-product-card">
+                                <img src="../media/razer-kraken-x.jpg" alt="Product 9" width="80">
+                                <div class="add-product-info">
+                                    <h4>Razer Kraken X чихэвч</h4>
+                                    <p class="cart-item-price">Үнэ: 680,000 ₮</p>
+                                </div>
+                                <span class="add-to-cart-label">Сагсанд нэмэх</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Сагсанд байгаа бүтээгдэхүүнүүд -->
+            <div class="cart-item-wrapper">
+                <input type="checkbox" id="remove-item-1" class="remove-item-checkbox">
+                <div class="cart-item">
+                    <div class="cart-item-content">
+                        <div class="cart-item-image">
+                            <a href="../product/product1-detail.html">
+                                <img src="../media/product1.png" alt="Product 1 thumbnail">
+                            </a>
+                        </div>
+                        <div class="cart-item-info">
+                            <a href="../product/product1-detail.html">
+                                <h3>Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition</h3>
+                            </a>
+                            <p class="cart-item-price">Үнэ: 2,920,000 ₮</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <label for="quantity-1">Тоо ширхэг:</label>
+                            <input type="number" id="quantity-1" name="quantity" value="1" min="1">
+                        </div>
+                        <div class="cart-item-total">
+                            <label>Нийт үнэ:</label>
+                            <p class="total-price">2,920,000 ₮</p>
+                        </div>
+                    </div>
+                    <label for="remove-item-1" class="remove-item-label">Устгах</label>
+                </div>
+            </div>
+
+            <div class="cart-item-wrapper">
+                <input type="checkbox" id="remove-item-2" class="remove-item-checkbox">
+                <div class="cart-item">
+                    <div class="cart-item-content">
+                        <div class="cart-item-image">
+                            <a href="../product/product7-detail.html">
+                                <img src="../media/mouse.jpg" alt="Product 7 thumbnail">
+                            </a>
+                        </div>
+                        <div class="cart-item-info">
+                            <a href="../product/product7-detail.html">
+                                <h3>Frutiger Aero хэв маягийн утасгүй хулгана</h3>
+                            </a>
+                            <p class="cart-item-price">Үнэ: 150,000 ₮</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <label for="quantity-2">Тоо ширхэг:</label>
+                            <input type="number" id="quantity-2" name="quantity" value="2" min="1">
+                        </div>
+                        <div class="cart-item-total">
+                            <label>Нийт үнэ:</label>
+                            <p class="total-price">300,000 ₮</p>
+                        </div>
+                    </div>
+                    <label for="remove-item-2" class="remove-item-label">Устгах</label>
+                </div>
+            </div>
+
+            <!-- Нэмэгдсэн бүтээгдэхүүнүүд (эхлээд нуугдсан) -->
+            <div class="cart-item-wrapper added-item" id="added-product-3">
+                <input type="checkbox" id="add-product-3-show" class="add-product-show-checkbox">
+                <input type="checkbox" id="remove-item-3" class="remove-item-checkbox">
+                <div class="cart-item">
+                    <div class="cart-item-content">
+                        <div class="cart-item-image">
+                            <a href="../product/product2-detail.html">
+                                <img src="../media/product2.png" alt="Product 2 thumbnail">
+                            </a>
+                        </div>
+                        <div class="cart-item-info">
+                            <a href="../product/product2-detail.html">
+                                <h3>AMD Ryzen 7 7800X3D, MSI B650M PROJECT ZERO, Zotac RTX 4070 SUPER</h3>
+                            </a>
+                            <p class="cart-item-price">Үнэ: 6,750,000 ₮</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <label for="quantity-3">Тоо ширхэг:</label>
+                            <input type="number" id="quantity-3" name="quantity" value="1" min="1">
+                        </div>
+                        <div class="cart-item-total">
+                            <label>Нийт үнэ:</label>
+                            <p class="total-price">6,750,000 ₮</p>
+                        </div>
+                    </div>
+                    <label for="remove-item-3" class="remove-item-label">Устгах</label>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Захиалгын хураангуй</h3>
+                <div class="cart-summary-item">
+                    <span>Бүтээгдэхүүний үнэ:</span>
+                    <span>3,220,000 ₮</span>
+                </div>
+                <div class="cart-summary-item">
+                    <span>Хүргэлт:</span>
+                    <span>Үнэгүй</span>
+                </div>
+                <div class="cart-summary-item">
+                    <span>Нийт дүн:</span>
+                    <span>3,220,000 ₮</span>
+                </div>
+            </div>
+
+            <div class="cart-actions">
+                <a href="../category/products.html">
+                    <button type="button">Бүтээгдэхүүн үргэлжлүүлэх</button>
+                </a>
+                <form action="checkout.html" method="get" style="flex: 1; min-width: 150px;">
+                    <button type="submit">Захиалах</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
+        <nav>
+            <a href="../Homepage/about.html">Бидний тухай</a> |
+            <a href="../Homepage/faq.html">Асуулт ба хариулт</a> |
+            <a href="../Homepage/our-team.html">Манай баг</a> |
+            <a href="../Homepage/contact-us.html">Холбоо барих</a>
+        </nav>
+    </footer>
+</body>
+</html>
