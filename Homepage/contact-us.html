@@ -8,19 +8,31 @@
 </head>
 <body><!-- Header (same across all pages) -->
     <header>
-        <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo" width="50" style="vertical-align:middle"> TechStore</h1></a>
-        <form action="/searchs.html" method="get">
-            <input type="text" name="all" placeholder="Бүтээгдэхүүн хайх...">
-            <button type="submit"><img src="/media/search-icon.svg" alt="Search" width="12px"></button>
-        </form>
-        <nav>
-            <a href="/category/products.html">Бүтээгдэхүүн</a> |
-            <a href="/category/categories.html">Ангилал</a> |
-            <a href="/product_order/cart.html">Сагс</a> |
-            <a href="/shop_user/profile.html">Профайл</a> |
-            <a href="/Homepage/login.html">Нэвтрэх</a> |
-            <a href="/shop_user/register.html">Бүртгүүлэх</a>
-        </nav>
+        <div class="header-top">
+            <div class="header-logo">
+                <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo"> TechStore</h1></a>
+            </div>
+            <div class="header-search">
+                <form action="/search.html" method="get">
+                    <input type="text" name="q" placeholder="Бүтээгдэхүүн хайх...">
+                    <button type="submit" aria-label="Хайх">
+                        <img src="/media/search-icon.svg" alt="Search">
+                    </button>
+                </form>
+            </div>
+            <div class="header-actions">
+                <a href="/product_order/cart.html" class="cart-link">Сагс</a>
+                <a href="/Homepage/login.html">Нэвтрэх</a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <nav class="header-nav">
+                <a href="/category/products.html">Бүтээгдэхүүн</a>
+                <a href="/category/categories.html">Ангилал</a>
+                <a href="/category/offers.html">Урамшуулал</a>
+                <a href="/build-pc.html">Build</a>
+            </nav>
+        </div>
     </header>
 
 <hr>
@@ -51,4 +63,5 @@
 
 </body>
 </html>
+
 
