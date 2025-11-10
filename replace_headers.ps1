@@ -21,7 +21,7 @@ $newHeader = @'
             </div>
             <div class="header-actions">
                 <a href="/product_order/cart.html" class="cart-link">Сагс</a>
-                <a href="/Homepage/login.html">Нэвтрэх</a>
+                <a href="/shop_user/login.html">Нэвтрэх</a>
             </div>
         </div>
         <div class="header-bottom">
