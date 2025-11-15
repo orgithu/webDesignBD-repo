@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Захиалга батлагдсан | TechStore</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/order-confirm.css">
     <link rel="stylesheet" href="/css/fixed.css">
     <meta name="description" content="Таны захиалга амжилттай хийгдсэн. Захиалгын мэдээллийг эндээс харна уу.">
 </head>
@@ -33,46 +33,54 @@
                 <a href="/category/products.html">Бүтээгдэхүүн</a>
                 <a href="/category/categories.html">Ангилал</a>
                 <a href="/category/offers.html">Урамшуулал</a>
-                <a href="/build-pc.html">Build</a>
+                <a href="/category/pc-build.html">Build</a>
             </nav>
         </div>
     </header>
 
     <main>
         <h2>Худалдан авалт хийсэнд баярлалаа</h2>
-        <p>Худалдан авсан бүтээгдэхүүн:</p>
-        <ul>
-            <li>
-                <a href="/product/product1-detail.html">
-                    <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
-                    Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
-                </a>
-            </li>
-        </ul>
-        <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#123456</strong></p>
-        <p>Холбоо барих дугаар: 99991121</p>
-        <p>E-Barimt г таны и-мэйл хаягаар илгээсэн.</p>
-        <section>
-            <h3>Хүргэлтийн мэдээлэл</h3>
-            <p>Нэр: NAME</p>
-            <p>Хаяг: ADDRESS</p>
-            <p>Утас: PHONE</p>
-            <p>И-мэйл: EMAIL</p>
-        </section>
-
-        <section>
-            <h3>Төлбөрийн мэдээлэл</h3>
-            <p>Төлбөрийн хэлбэр: Карт</p>
-            <p>Төлөв: Амжилттай</p>
-        </section>
-        <section>
-            <h3>Хянах</h3>
-            <p>Та захиалгын явцыг доорх товчоор хянаж болно:</p>
-            <form action="/product_order/order-tracking.html" method="get">
-                <button type="submit">Захиалга хянах</button>
-            </form>
-            <p>Хүргэлт хүлээгдэж буй огноо: 2025-11-04</p>
-        </section>
+        <div class="confirm-container">
+            <div class="left-column">
+                <section class="order-summary">
+                    <h3>Захиалгын тойм</h3>
+                    <p>Худалдан авсан бүтээгдэхүүн:</p>
+                    <ul>
+                        <li>
+                            <a href="/product/product1-detail.html">
+                                <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
+                                Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Таны захиалга амжилттай хийгдсэн. Захиалгын дугаар: <strong id="track-code">#123456</strong></p>
+                    <p>Холбоо барих дугаар: 99991121</p>
+                    <p>E-Barimt г таны и-мэйл хаягаар илгээсэн.</p>
+                    <p>Хүргэлт хүлээгдэж буй огноо: 2025-11-04</p>
+                </section>
+                <section class="tracking-section">
+                    <h3>Хянах</h3>
+                    <p>Та захиалгын явцыг доорх товчоор хянаж болно:</p>
+                    <form action="/product_order/order-tracking.html" method="get">
+                        <button type="submit">Захиалга хянах</button>
+                    </form>
+                </section>
+            </div>
+            <div class="right-column">
+                <section>
+                    <h3>Хүргэлтийн мэдээлэл</h3>
+                    <p>Нэр: NAME</p>
+                    <p>Хаяг: ADDRESS</p>
+                    <p>Утас: PHONE</p>
+                    <p>И-мэйл: EMAIL</p>
+                </section>
+                <section>
+                    <h3>Төлбөрийн мэдээлэл</h3>
+                    <p>Төлбөрийн хэлбэр: Карт</p>
+                    <p>Төлөв: Амжилттай</p>
+                </section>
+            </div>
+        </div>
     </main>
 
     <!-- Footer (same across all pages) -->

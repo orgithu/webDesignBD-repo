@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Захиалга хянах | TechStore</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/order-tracking.css">
     <link rel="stylesheet" href="/css/fixed.css">
     <meta name="description" content="Track your order status with your order number.">
 </head>
@@ -33,30 +33,40 @@
                 <a href="/category/products.html">Бүтээгдэхүүн</a>
                 <a href="/category/categories.html">Ангилал</a>
                 <a href="/category/offers.html">Урамшуулал</a>
-                <a href="/build-pc.html">Build</a>
+                <a href="/category/pc-build.html">Build</a>
             </nav>
         </div>
     </header>
 
     <main>
         <h2>Захиалга хянах</h2>
-        <form>
-            <input type="text" name="order" placeholder="Захиалгын дугаар оруулна уу">
-            <button type="submit">Хайх</button>
-        </form>
-
-        <h3>Идэвхтэй захиалгын мэдээлэл:</h3>
-        <div>
-            <p>Захиалгын дугаар: #123456</p>
-            <p>Захиалгын огноо: 2025-01-01</p>
-            <p>Бүтээгдэхүүн:
-                <a href="/product/product1-detail.html">
-                    <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
-                    Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
-                </a>
-            </p>
-            <p>Захиалгийн төлөв: Боловсруулж байна</p>
-            <p>Хүргэлтийн мэдээлэл: STATUS</p>
+        <div class="tracking-container">
+            <div class="left-column">
+                <section class="search-section">
+                    <h3>Захиалга хайх</h3>
+                    <form>
+                        <input type="text" name="order" placeholder="Захиалгын дугаар оруулна уу">
+                        <button type="submit">Хайх</button>
+                    </form>
+                </section>
+            </div>
+            <div class="right-column">
+                <section class="order-info">
+                    <h3>Идэвхтэй захиалгын мэдээлэл:</h3>
+                    <div class="order-details">
+                        <p>Захиалгын дугаар: #123456</p>
+                        <p>Захиалгын огноо: 2025-01-01</p>
+                        <p>Бүтээгдэхүүн:
+                            <a href="/product/product1-detail.html">
+                                <img src="/media/product1.png" alt="Product 1 thumbnail" width="80" style="vertical-align:middle;margin-right:8px;">
+                                Intel - Core i5 14400F, Asus - Dual RTX 5060 8GB OC Edition
+                            </a>
+                        </p>
+                        <p>Захиалгийн төлөв: Боловсруулж байна</p>
+                        <p>Хүргэлтийн мэдээлэл: STATUS</p>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
