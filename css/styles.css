@@ -21,7 +21,7 @@ body {
 }
 
 main {
-  max-width: 1200px;
+  max-width: 1800px;
   margin: 2rem auto;
   padding: 1rem;
   background-color: white;
@@ -82,7 +82,7 @@ input {
 /* Product grid and cards */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -92,6 +92,7 @@ input {
   color: inherit;
   display: block;
   transition: transform 0.3s;
+  height: 100%;
 }
 
 .product-link:hover {
@@ -99,12 +100,16 @@ input {
 }
 
 .product-card {
-  background-color: white;
+  background-color: rgba(255, 201, 226, 0.088);
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow);
   padding: 1rem;
   text-align: center;
   transition: box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-card:hover {
@@ -113,7 +118,7 @@ input {
 
 .product-card img {
   width: 100%;
-  height: 200px;
+  height: 260px;
   object-fit: contain;
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
@@ -128,6 +133,7 @@ input {
   margin: 0.5rem 0;
   font-weight: bold;
   color: var(--primary-color);
+  margin-top: auto;
 }
 
 /* Search results styling */
@@ -193,4 +199,78 @@ input {
   .product-grid {
     grid-template-columns: 1fr;
   }
-}
+} 
+
+
+  .hero-slider {
+    width: 100%;
+    height: 700px;
+    position:relative;
+    overflow:hidden;
+    background-color: #000000;
+  }
+
+  .slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .slide.active{
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .slide a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .slide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .slide-content {
+    position: absolute;
+    top:50%;
+    left:10%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    z-index:2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  }
+
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: #ffffff;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+  }
+  .prev-btn:hover, .next-btn:hover {
+    background-color: var(--accent-color);
+  }
+
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+
+  
