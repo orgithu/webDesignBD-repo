@@ -22,6 +22,17 @@ body {
   line-height: 1.5;
 }
 
+/* Layout: make page expand to full height so footer can be pinned to the bottom
+   We use a minimal, targeted flex layout that only sets 'main' or top-level wrappers
+   to grow. This avoids changing display rules for nested elements that rely
+   on block layout and prevents breaking page-specific flex/grid contexts. */
+html, body { height: 100%; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* Make top-level main wrapper grow to push footer to bottom when content is short. */
+main, body > .main, body > section.product-list, body > .product-page, body > .auth-container { flex: 1 0 auto; }
+
+
 /* HEADER */
 header {
   background: var(--header-bg);
@@ -168,6 +179,8 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 3rem;
+  margin-bottom: 0; /* ensure no gap below footer */
+  margin-top: auto; /* push footer to the end of the column layout */
 }
 
 footer nav {

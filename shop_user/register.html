@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Бүртгүүлэх</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/login-signup.css">
     <link rel="stylesheet" href="/css/fixed.css">
 </head>
 <body><!-- Header (same across all pages) -->
@@ -35,8 +35,9 @@
         </div>
     </header>
 
-  <h2>Бүртгүүлэх</h2>
-  <form action="/shop_user/login.html" method="post">
+    <main class="auth-container">
+        <h2>Бүртгүүлэх</h2>
+        <form action="/shop_user/login.html" method="post">
     <label for="name">Нэр:</label><br>
     <input type="text" id="name" name="name" required><br><br>
 
@@ -46,8 +47,10 @@
     <label for="password">Нууц үг:</label><br>
     <input type="password" id="password" name="password" required><br><br>
 
-    <button type="submit">Бүртгүүлэх</button>
-  </form>
+        <button type="submit">Бүртгүүлэх</button>
+        </form>
+        <p class="auth-helper">Бүртгэлтэй юу? <a href="/shop_user/login.html">Нэвтрэх</a></p>
+    </main>
 
   <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>

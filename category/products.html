@@ -5,6 +5,7 @@
   <title>Бүх бүтээгдэхүүн | TechStore</title>
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/fixed.css">
+  <link rel="stylesheet" href="/css/product-list.css">
 </head>
 <body><!-- Header (same across all pages) -->
     <header>
@@ -37,7 +38,71 @@
 
   <section class="product-list">
     <h2>Бүх бүтээгдэхүүн</h2>
-    <div class="product-grid">
+    <div class="product-page">
+      <aside class="filters" aria-label="Product filters">
+        <div class="filter-card">
+          <div class="filter-header">
+            <h3>Шүүлтүүр</h3>
+            <button class="filter-reset">Reset</button>
+          </div>
+          <div class="filter-group">
+            <label class="filter-title">category</label>
+            <ul>
+              <li><label><input type="checkbox"> Computer</label></li>
+              <li><label><input type="checkbox"> Accessories</label></li>
+              <li><label><input type="checkbox"> Утасны хэрэгсэл</label></li>
+              <li><label><input type="checkbox"> График карт</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-title">Price range</label>
+            <div class="price-range">
+              <input type="number" class="price-min" placeholder="min"> - <input type="number" class="price-max" placeholder="max">
+              <input type="range" min="0" max="10000000" value="1200000" class="price-slider">
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-title">Brand</label>
+            <ul>
+              <li><label><input type="checkbox"> Intel</label></li>
+              <li><label><input type="checkbox"> AMD</label></li>
+              <li><label><input type="checkbox"> Asus</label></li>
+              <li><label><input type="checkbox"> MSI</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-title">Үнэлгээ</label>
+            <ul class="rating">
+              <li><label><input type="checkbox"> ★★★★★</label></li>
+              <li><label><input type="checkbox"> ★★★★☆</label></li>
+              <li><label><input type="checkbox"> ★★★☆☆</label></li>
+            </ul>
+          </div>
+
+          <div class="filter-actions">
+            <button class="apply-filter">Apply filter</button>
+            <button class="clear-filter">Clear filter</button>
+          </div>
+        </div>
+      </aside>
+      <div class="list-area">
+        <div class="sort-row">
+          <div class="result-count">18 үр дүн</div>
+          <div class="sort-controls">
+            <label for="sort-by">Эрэмбэлэх:</label>
+            <select id="sort-by">
+              <option>Тохирох</option>
+              <option>Шинэ</option>
+              <option>Үнэ: Өндрөөс Доош</option>
+              <option>Үнэ: Доороос Өндөр</option>
+            </select>
+            <button class="filter-toggle">Шүүлтүүр</button>
+          </div>
+        </div>
+        <div class="product-grid">
       <a href="/product/product1-detail.html" class="product-link">
         <div class="product-card">
           <img src="../media/product1.png" alt="Intel i5 14400F PC"height="300">
@@ -100,6 +165,8 @@
           <h3>Razer Kraken X</h3>
           <p>Үнэ: 680'000 ₮</p>
         </div>
+    </div>
+      </div>
     </div>
   </section>
 

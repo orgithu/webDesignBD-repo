@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Intel i5 12400F | TechStore</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/fixed.css">
     <meta name="description" content="Intel i5 12400F prebuilt PC with RTX 5060, 32GB RAM option, 1TB NVMe. Free assembly & shipping.">
 </head>
@@ -39,11 +39,21 @@
     </header>
 
     <main>
-        <section>
-            <img src="/media/product3.png" alt="Product Image - Intel i5 12400F" width="500">
-            <h1 id="product-name">Intel - Core i5 12400F, Asus - Dual RTX 5060 8GB OC Edition</h1>
-            <h2>Үнэ: 3,210,000 ₮</h2>
-            <ul id="product-description">
+        <section class="product-section">
+            <div class="product-images">
+                <img src="/media/product3.png" alt="Product Image - Intel i5 12400F">
+            </div>
+            <div class="product-info">
+                <div class="extra-button">
+                    <button id="save">Хадгалах</button>
+                    <button id="similar">Төстэй</button>
+                    <button id="share">Хуваалцах</button>
+                </div>
+                <h1 id="product-name">Intel - Core i5 12400F, Asus - Dual RTX 5060 8GB OC Edition</h1>
+                <hr>
+                <div class="price">Үнэ: 3,210,000 ₮</div>
+                <hr>
+                <ul id="product-description">
                 <li>Intel - Core i5 12400F</li>
                 <li>Asrock - B760M-H2/M.2</li>
                 <li>Acer - Predator Pallas II 32GB (2×16GB) 6000Mhz / Black</li>
@@ -56,13 +66,11 @@
                 <li>Windows license key</li>
                 <li>Hitech Mouse Pad</li>
             </ul>
-            <form action="/product_order/cart.html" method="get">
-                <button type="submit">Сагсанд нэмэх</button>
-            </form>
-            <form action="/product_order/checkout.html" method="get">
-                <button type="submit">Захиалах</button>
-            </form>
-            <button type="button">Хуваалцах</button>
+                <div class="buttons">
+                    <button id="add-to-cart" onclick="location.href='/product_order/cart.html'">Сагсанд нэмэх</button>
+                    <button id="checkout" onclick="location.href='/product_order/checkout.html'">Захиалах</button>
+                </div>
+            </div>
         </section>
 
         <section>

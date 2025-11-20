@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Хэрэглэгчийн профайл</title>
-  <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/fixed.css">
+    <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="/css/fixed.css">
+        <link rel="stylesheet" href="/css/profile.css">
 </head>
 <body><!-- Header (same across all pages) -->
     <header>
@@ -35,12 +36,42 @@
         </div>
     </header>
 
-  <h2>Миний профайл</h2>
-  <img src="/media/user-profile.jpg" alt="Хэрэглэгчийн зураг" width="150"><br><br>
-  <p><strong>Нэр:</strong> Бат-Эрдэнэ</p>
-  <p><strong>Имэйл:</strong> user@example.com</p>
-  <a href="/product_order/order-tracking.html">Миний захиалгууд</a><br>
-  <a href="/shop_user/settings.html">Хувийн тохиргоо</a>
+    <main class="profile-container">
+        <aside class="profile-sidebar">
+            <img src="/media/user-profile.jpg" alt="Хэрэглэгчийн зураг" class="user-img">
+            <h3>Бат-Эрдэнэ</h3>
+            <p>user@example.com</p>
+            <div class="profile-links">
+                <a href="/product_order/order-tracking.html">Миний захиалгууд</a>
+                <a href="/shop_user/wishlist.html">Wishlist / Хадгалсан</a>
+                <a href="/shop_user/settings.html">Хувийн тохиргоо</a>
+                <a href="/shop_user/addresses.html">Хаяг / Addresses</a>
+                <a href="/shop_user/payment-methods.html">Төлбөрийн аргууд</a>
+                <a href="/shop_user/login.html" style="color:#e04b4b">Гарах (Logout)</a>
+            </div>
+        </aside>
+        <section class="profile-main">
+            <h2>Миний профайл</h2>
+            <div class="profile-grid">
+                <div class="account-row">
+                    <div class="meta">
+                        <p><strong>Нэр:</strong> Бат-Эрдэнэ</p>
+                        <p><strong>Имэйл:</strong> user@example.com</p>
+                    </div>
+                    <div>
+                        <a href="/shop_user/settings.html" class="action-btn">Хувийн тохиргоо</a>
+                    </div>
+                </div>
+                <div class="account-row">
+                    <div class="meta">
+                        <p><strong>Хадгасан бүтээгдэхүүнүүд:</strong> 12</p>
+                        <p><strong>Нээлттэй захиалгууд:</strong> 1</p>
+                    </div>
+                    <div><a class="action-btn" href="/shop_user/wishlist.html">Wishlist</a></div>
+                </div>
+            </div>
+        </section>
+    </main>
 
   <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>

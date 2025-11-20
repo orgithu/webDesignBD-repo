@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Tablet Keyboard | TechStore</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product.css">
     <link rel="stylesheet" href="/css/fixed.css">
 </head>
 <body>
@@ -35,11 +35,22 @@
             </nav>
         </div>
     </header>
-    <div class="main">
-        <img src="/media/razer-kraken-x.jpg" alt="Product Image" style="max-width:500px;">
-        <h1 id="product-name">Razer Kraken X чихэвч</h1>
-        <h2>Үнэ: 680'000 ₮</h2>
-        <ul id="product-description">
+    <main>
+        <section class="product-section">
+            <div class="product-images">
+                <img src="/media/razer-kraken-x.jpg" alt="Product Image - Razer Kraken X">
+            </div>
+            <div class="product-info">
+                <div class="extra-button">
+                    <button id="save">Хадгалах</button>
+                    <button id="similar">Төстэй</button>
+                    <button id="share">Хуваалцах</button>
+                </div>
+                <h1 id="product-name">Razer Kraken X чихэвч</h1>
+                <hr>
+                <div class="price">Үнэ: 680'000 ₮</div>
+                <hr>
+                <ul id="product-description">
             <li>Өнгө: Хар </li>
             <li>Тохиромжтой төхөөрөмжүүд: MAC, PC, Таблет, Гар утас</li>
             <li>Холбогдох арга: Bluetooth</li>
@@ -48,14 +59,13 @@
             <li>Динамик драйвер: 40 мм</li>
             <li>Жин: 250 гр</li>
         </ul>
-        <form action="/product_order/cart.html" method="get">
-            <button type="submit">Сагсанд нэмэх</button>
-        </form>
-        <form action="/product_order/checkout.html" method="get">
-            <button>Захиалах</button>
-        </form>
-        <button>Хуваалцах</button>
-    </div>
+                <div class="buttons">
+                    <button id="add-to-cart" onclick="location.href='/product_order/cart.html'">Сагсанд нэмэх</button>
+                    <button id="checkout" onclick="location.href='/product_order/checkout.html'">Захиалах</button>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
         <a href="/Homepage/about.html">Бидний тухай</a> |

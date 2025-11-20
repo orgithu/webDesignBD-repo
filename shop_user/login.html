@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Нэвтрэх</title>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/login-signup.css">
   <link rel="stylesheet" href="/css/fixed.css">
+    <style>
+    </style>
 </head>
 <body><!-- Header (same across all pages) -->
     <header>
@@ -35,17 +37,23 @@
         </div>
     </header>
   
-  <h2>Нэвтрэх</h2>
-    <label for="email">Имэйл хаяг:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+    <main class="auth-container">
+        <h2>Нэвтрэх</h2>
+        <form action="/shop_user/login.html" method="post">
+            <label for="email">Имэйл хаяг:</label>
+            <input type="email" id="email" name="email" required>
 
-    <label for="password">Нууц үг:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
+            <label for="password">Нууц үг:</label>
+            <input type="password" id="password" name="password" required>
 
-    <button type="submit">Нэвтрэх</button>
-  </form>
-
-  <p>Шинэ хэрэглэгч үү? <a href="register.html">Бүртгүүлэх</a></p>
+            <div class="auth-actions">
+                <a class="forgot" href="/shop_user/forgot-password.html">Нууц үг мартсан уу?</a>
+                <button type="submit">Нэвтрэх</button>
+            </div>
+        </form>
+        <p class="auth-helper">Шинэ хэрэглэгч үү? <a href="register.html">Бүртгүүлэх</a></p>
+        <a href="/shop_user/profile.html">profile</a>
+    </main>
 
   <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
