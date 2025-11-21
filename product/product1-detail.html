@@ -43,10 +43,10 @@
         <img id="mainImage" class="main-image" src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
         <div class="thumbnail-gallery">
           <!-- Note: Using same image as placeholder. Replace with actual product images for different views -->
-          <img class="thumbnail active" src="/media/product1.png" alt="Main view" onclick="changeImage('/media/product1.png', this)">
-          <img class="thumbnail" src="/media/product1.png" alt="Side view" onclick="changeImage('/media/product1.png', this)">
-          <img class="thumbnail" src="/media/product1.png" alt="Front view" onclick="changeImage('/media/product1.png', this)">
-          <img class="thumbnail" src="/media/product1.png" alt="Detail view" onclick="changeImage('/media/product1.png', this)">
+          <img class="thumbnail active" src="/media/product1.png" alt="Main view" tabindex="0" data-image="/media/product1.png">
+          <img class="thumbnail" src="/media/product1.png" alt="Side view" tabindex="0" data-image="/media/product1.png">
+          <img class="thumbnail" src="/media/product1.png" alt="Front view" tabindex="0" data-image="/media/product1.png">
+          <img class="thumbnail" src="/media/product1.png" alt="Detail view" tabindex="0" data-image="/media/product1.png">
         </div>
       </div>
 
@@ -113,6 +113,7 @@
   </footer>
 
   <script>
+    // Thumbnail gallery functionality
     function changeImage(imageSrc, thumbnailElement) {
       // Update main image
       document.getElementById('mainImage').src = imageSrc;
@@ -125,6 +126,28 @@
       // Add active class to clicked thumbnail
       thumbnailElement.classList.add('active');
     }
+
+    // Add event listeners to thumbnails
+    document.addEventListener('DOMContentLoaded', function() {
+      const thumbnails = document.querySelectorAll('.thumbnail');
+      
+      thumbnails.forEach(thumbnail => {
+        // Click event
+        thumbnail.addEventListener('click', function() {
+          const imageSrc = this.getAttribute('data-image');
+          changeImage(imageSrc, this);
+        });
+        
+        // Keyboard accessibility (Enter or Space)
+        thumbnail.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const imageSrc = this.getAttribute('data-image');
+            changeImage(imageSrc, this);
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
