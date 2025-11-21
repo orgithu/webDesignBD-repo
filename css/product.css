@@ -59,9 +59,11 @@ main {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.thumbnail:hover {
+.thumbnail:hover,
+.thumbnail:focus {
   border-color: var(--accent-color);
   transform: scale(1.05);
+  outline: none;
 }
 
 .thumbnail.active {

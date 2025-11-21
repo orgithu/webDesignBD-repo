@@ -40,13 +40,13 @@
   <main>
     <section class="product-section">
       <div class="product-images">
-        <img id="mainImage" class="main-image" src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
+        <img id="mainImage" class="main-image" src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC - Main view">
         <div class="thumbnail-gallery">
           <!-- Note: Using same image as placeholder. Replace with actual product images for different views -->
-          <img class="thumbnail active" src="/media/product1.png" alt="Main view" tabindex="0" data-image="/media/product1.png">
-          <img class="thumbnail" src="/media/product1.png" alt="Side view" tabindex="0" data-image="/media/product1.png">
-          <img class="thumbnail" src="/media/product1.png" alt="Front view" tabindex="0" data-image="/media/product1.png">
-          <img class="thumbnail" src="/media/product1.png" alt="Detail view" tabindex="0" data-image="/media/product1.png">
+          <img class="thumbnail active" src="/media/product1.png" alt="Main view" tabindex="0" data-image="/media/product1.png" data-alt="Intel Core i5 14400F Gaming PC - Main view">
+          <img class="thumbnail" src="/media/product1.png" alt="Side view" tabindex="0" data-image="/media/product1.png" data-alt="Intel Core i5 14400F Gaming PC - Side view">
+          <img class="thumbnail" src="/media/product1.png" alt="Front view" tabindex="0" data-image="/media/product1.png" data-alt="Intel Core i5 14400F Gaming PC - Front view">
+          <img class="thumbnail" src="/media/product1.png" alt="Detail view" tabindex="0" data-image="/media/product1.png" data-alt="Intel Core i5 14400F Gaming PC - Detail view">
         </div>
       </div>
 
@@ -114,9 +114,14 @@
 
   <script>
     // Thumbnail gallery functionality
-    function changeImage(imageSrc, thumbnailElement) {
-      // Update main image
-      document.getElementById('mainImage').src = imageSrc;
+    function changeImage(thumbnailElement) {
+      const imageSrc = thumbnailElement.getAttribute('data-image');
+      const imageAlt = thumbnailElement.getAttribute('data-alt');
+      const mainImage = document.getElementById('mainImage');
+      
+      // Update main image source and alt text
+      mainImage.src = imageSrc;
+      mainImage.alt = imageAlt;
       
       // Remove active class from all thumbnails
       document.querySelectorAll('.thumbnail').forEach(thumb => {
@@ -134,16 +139,14 @@
       thumbnails.forEach(thumbnail => {
         // Click event
         thumbnail.addEventListener('click', function() {
-          const imageSrc = this.getAttribute('data-image');
-          changeImage(imageSrc, this);
+          changeImage(this);
         });
         
         // Keyboard accessibility (Enter or Space)
         thumbnail.addEventListener('keydown', function(e) {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            const imageSrc = this.getAttribute('data-image');
-            changeImage(imageSrc, this);
+            changeImage(this);
           }
         });
       });
