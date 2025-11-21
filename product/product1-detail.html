@@ -40,7 +40,13 @@
   <main>
     <section class="product-section">
       <div class="product-images">
-        <img src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
+        <img id="mainImage" class="main-image" src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
+        <div class="thumbnail-gallery">
+          <img class="thumbnail active" src="/media/product1.png" alt="Main view" onclick="changeImage('/media/product1.png', this)">
+          <img class="thumbnail" src="/media/product1.png" alt="Side view" onclick="changeImage('/media/product1.png', this)">
+          <img class="thumbnail" src="/media/product1.png" alt="Front view" onclick="changeImage('/media/product1.png', this)">
+          <img class="thumbnail" src="/media/product1.png" alt="Detail view" onclick="changeImage('/media/product1.png', this)">
+        </div>
       </div>
 
       <div class="product-info">
@@ -104,6 +110,21 @@
       <a href="/Homepage/contact-us.html">Холбоо барих</a>
     </nav>
   </footer>
+
+  <script>
+    function changeImage(imageSrc, thumbnailElement) {
+      // Update main image
+      document.getElementById('mainImage').src = imageSrc;
+      
+      // Remove active class from all thumbnails
+      document.querySelectorAll('.thumbnail').forEach(thumb => {
+        thumb.classList.remove('active');
+      });
+      
+      // Add active class to clicked thumbnail
+      thumbnailElement.classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
