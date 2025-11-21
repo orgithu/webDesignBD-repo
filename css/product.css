@@ -63,7 +63,8 @@ main {
 .thumbnail:focus {
   border-color: var(--accent-color);
   transform: scale(1.05);
-  outline: none;
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 .thumbnail.active {
