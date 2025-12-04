@@ -23,9 +23,10 @@ $newHeader = @'
                 <a href="/product_order/cart.html" class="cart-link">Сагс</a>
                 <a href="/shop_user/login.html">Нэвтрэх</a>
             </div>
+            <button class="hamburger" aria-label="Menu">☰</button>
         </div>
         <div class="header-bottom">
-            <nav class="header-nav">
+            <nav class="header-nav" id="main-nav">
                 <a href="/category/products.html">Бүтээгдэхүүн</a>
                 <a href="/category/categories.html">Ангилал</a>
                 <a href="/category/offers.html">Урамшуулал</a>

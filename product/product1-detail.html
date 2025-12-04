@@ -26,9 +26,10 @@
                 <a href="/product_order/cart.html" class="cart-link">Сагс</a>
                 <a href="/shop_user/login.html">Нэвтрэх</a>
             </div>
+            <button class="hamburger" aria-label="Menu">☰</button>
         </div>
         <div class="header-bottom">
-            <nav class="header-nav">
+            <nav class="header-nav" id="main-nav">
                 <a href="/category/products.html">Бүтээгдэхүүн</a>
                 <a href="/category/categories.html">Ангилал</a>
                 <a href="/category/offers.html">Урамшуулал</a>
@@ -40,7 +41,14 @@
   <main>
     <section class="product-section">
       <div class="product-images">
-        <img src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
+        <div class="main-image">
+          <img src="/media/product1.png" alt="Intel Core i5 14400F Gaming PC">
+        </div>
+        <div class="thumbnail-images">
+          <img src="/media/product1.png" alt="Thumbnail 1" tabindex="0" role="button">
+          <img src="/media/product1.png" alt="Thumbnail 2" tabindex="0" role="button">
+          <img src="/media/product1.png" alt="Thumbnail 3" tabindex="0" role="button">
+        </div>
       </div>
 
       <div class="product-info">
@@ -82,13 +90,17 @@
         <div class="related-item">
           <a href="/product/product2-detail.html">
             <img src="/media/product2.png" alt="Intel i5 13400F RTX 4060">
-            Intel i5 13400F + RTX 4060 8GB
+            <p>
+              Intel i5 13400F + RTX 4060 8GB
+            </p>
           </a>
         </div>
         <div class="related-item">
           <a href="/product/product3-detail.html">
             <img src="/media/product3.png" alt="Intel i5 12400F RTX 5060">
+            <p>
             Intel i5 12400F + RTX 5060 8GB
+            </p>
           </a>
         </div>
       </div>
@@ -97,14 +109,16 @@
 
   <footer>
     <p>© 2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-    <nav>
+  <script src="/js/header.js"></script>
       <a href="/Homepage/about.html">Бидний тухай</a> |
       <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
       <a href="/Homepage/our-team.html">Манай баг</a> |
       <a href="/Homepage/contact-us.html">Холбоо барих</a>
     </nav>
   </footer>
+<script src="../js/header.js"></script>
 </body>
 </html>
+
 
 

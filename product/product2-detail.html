@@ -26,9 +26,10 @@
                 <a href="/product_order/cart.html" class="cart-link">Сагс</a>
                 <a href="/shop_user/login.html">Нэвтрэх</a>
             </div>
+            <button class="hamburger" aria-label="Menu">☰</button>
         </div>
         <div class="header-bottom">
-            <nav class="header-nav">
+            <nav class="header-nav" id="main-nav">
                 <a href="/category/products.html">Бүтээгдэхүүн</a>
                 <a href="/category/categories.html">Ангилал</a>
                 <a href="/category/offers.html">Урамшуулал</a>
@@ -40,7 +41,14 @@
     <main>
         <section class="product-section">
             <div class="product-images">
-                <img src="/media/product2.png" alt="Product Image - AMD Ryzen 7 7800X3D">
+                <div class="main-image">
+                    <img src="/media/product2.png" alt="Product Image - AMD Ryzen 7 7800X3D">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="/media/product2.png" alt="Thumbnail 1" tabindex="0" role="button">
+                    <img src="/media/product2.png" alt="Thumbnail 2" tabindex="0" role="button">
+                    <img src="/media/product2.png" alt="Thumbnail 3" tabindex="0" role="button">
+                </div>
             </div>
             <div class="product-info">
                 <div class="extra-button">
@@ -103,8 +111,10 @@
             <a href="/Homepage/contact-us.html">Холбоо барих</a>
         </nav>
     </footer>
+<script src="../js/header.js"></script>
 </body>
 </html>
+
 
 
 
