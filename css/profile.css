@@ -1,0 +1,35 @@
+/* Profile page styles */
+:root{
+  --primary-color: #1b1f3b;
+  --accent-color: #4ECDC4;
+  --muted: #6b7280;
+  --bg: #f8f9fa;
+  --card: #fff;
+  --radius: 12px;
+  --shadow: 0 10px 30px rgba(18,25,48,0.06);
+  --font-family: 'Inter', Arial, sans-serif;
+}
+
+.profile-container{ max-width: 1100px; margin: 2.25rem auto; padding: 1rem; display:grid; grid-template-columns: 280px 1fr; gap: 1.5rem }
+
+.profile-sidebar{ background:var(--card); border-radius:var(--radius); padding:1rem; box-shadow:var(--shadow); border:1px solid rgba(20,26,40,0.04) }
+.profile-sidebar .user-img{ width:110px; height:110px; border-radius: 999px; object-fit:cover; display:block; margin:0 auto 0.75rem }
+.profile-sidebar h3{ text-align:center; margin:0; font-size:1.05rem }
+.profile-sidebar p{ text-align:center; color:var(--muted); font-size:.95rem }
+.profile-links{ margin-top:1rem }
+.profile-links a{ display:block; padding:.6rem .75rem; color:var(--primary-color); text-decoration:none; border-radius:8px; margin:.25rem 0 }
+.profile-links a:hover{ background: rgba(78,205,196,0.06) }
+
+.profile-main{ background:var(--card); border-radius:var(--radius); padding:1rem; box-shadow:var(--shadow); border:1px solid rgba(20,26,40,0.04) }
+.profile-main h2{ margin-top:0 }
+.profile-grid{ display:grid; gap:1rem }
+.account-row{ display:flex; gap:1rem; align-items:center; padding:1rem; border-radius:8px; background: #fff; border:1px solid rgba(0,0,0,0.03) }
+.account-row .meta{ flex:1 }
+.account-row .meta p{ margin:0 }
+.action-btn{ background: linear-gradient(90deg,var(--accent-color),#35a199); color: #fff; border:none; padding:.5rem .75rem; border-radius:8px; cursor:pointer }
+
+/* small devices */
+@media (max-width: 900px){
+  .profile-container{ grid-template-columns: 1fr }
+  .profile-sidebar{ order: 2 }
+}

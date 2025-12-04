@@ -1,0 +1,72 @@
+/* Login and Signup shared styles */
+:root{
+  --accent-color: #4ECDC4;
+  --bg: #f8f9fa;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --radius: 10px;
+  --shadow: 0 6px 20px rgba(17,22,34,0.06);
+  --text: #222;
+  --font-family: 'Inter', Arial, sans-serif;
+}
+
+body{
+  font-family: var(--font-family);
+  background: linear-gradient(180deg,#f4f7fb,#fff);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+}
+
+/* Page container used by login & signup pages */
+.auth-container{
+  min-width: 500px;
+  padding: 2rem;
+  margin: 3rem auto;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(17,22,34,0.03);
+}
+
+.auth-container h2{ 
+  margin-top: 0;
+  color: #1b1f3b;
+  font-size: 1.35rem;
+  margin-bottom: 1rem;
+}
+
+.auth-container form{ display:flex; flex-direction:column; gap: .75rem }
+.auth-container label{ color: var(--muted); font-weight:600 }
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"]{
+  padding: .8rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  font-size: 1rem;
+}
+
+.auth-actions{ display:flex; justify-content:space-between; align-items:center; margin-top: .75rem }
+.auth-actions .forgot{ color:var(--muted); font-size: .9rem; text-decoration:none }
+
+button[type="submit"]{
+  background: linear-gradient(90deg,var(--accent-color),#35a199);
+  color:#fff;
+  border:none;
+  padding: .9rem 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover{ opacity:.95 }
+
+/* Link to register/login */
+.auth-helper{ margin-top: 1rem; text-align: center; }
+.auth-helper a{ color: var(--accent-color); text-decoration:none; font-weight:700 }
+
+/* Small screens */
+@media (max-width: 600px){
+  .auth-container{ margin: 1rem; padding: 1rem }
+}
