@@ -334,3 +334,187 @@ footer a:hover {
     flex-direction: column;
   }
 }
+/* Product grid and cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.product-link:hover {
+  transform: translateY(-5px);
+}
+
+.product-card {
+  background-color: rgba(255, 201, 226, 0.088);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin: 0.5rem 0;
+  color: var(--text-color);
+}
+
+/* Typography */
+.product-card h4 {
+  margin: 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.product-card p {
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-top: auto;
+}
+section h1 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.mobile-icon-bar {
+    display: none !important;
+}
+
+/* Make sure the Hamburger button is ALWAYS visible on mobile */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+      }
+
+    .slider{
+      width: 100%;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px;}
+    .header-top { padding: 1rem; flex-wrap: wrap; gap: 1rem; }
+    }
+
+.slider{
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.slider img{
+  width: 100%;
+  display: none;
+}
+
+img.displaySlide{
+  display: block;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slider button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background-color: rgba(233, 83, 143, 0.789);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev{
+  left: -70px;
+}
+
+.next{
+  right: -70px;
+}
+
+@keyframes fade{
+  from{opacity: .5}
+  to {opacity: 1}
+}
+
+
+.carousel-wrapper {
+    position: relative; 
+    width: 90%;     
+    margin: 0 auto;   
+    max-width: 1400px;
+}
+
+.product-carousel {
+    display: flex !important;
+    gap: 40px;         
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 10px; 
+    
+    scrollbar-width: none;
+}
+.product-carousel::-webkit-scrollbar { display: none; }
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    /* Style */
+    background: #2C334D;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.prev-btn {
+    left: -20px;
+}
+
+.next-btn {
+    right: -20px; 
+}
+
+.product-carousel .product-link {
+    min-width: 280px;
+    flex: 0 0 auto;
+    display: block;
+}

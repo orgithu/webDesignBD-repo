@@ -1,32 +1,41 @@
-const slides = document.querySelectorAll('.slide');
-const nextBtn = document.querySelector('.next-btn');
-const prevBtn = document.querySelector('.prev-btn');
+const slides = document.querySelectorAll('.slides img');
+let slideIndex = 0;
+let intervalid = null;
 
-let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', initializeSlider);
 
-function showSlide(index) {
-    slides.forEach((slide) => {
-        slide.classList.remove('active');
-    });
+function initializeSlider(){
 
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
+    if(slides.length > 0){
+        slides[slideIndex].classList.add("displaySlide");
+        intervalid = setInterval(nextSlide, 5000);
+    }   
+}
+
+function showSlide(index){
+
+    if(index >= slides.length){
+        slideIndex = 0;
+    }
+    else if(index < 0){
+        slideIndex = slides.length - 1;
     }
 
-    slides[currentSlide].classList.add('active');
+    slides.forEach (slide => {
+        slide.classList.remove("displaySlide");
+    })
+    slides[slideIndex].classList.add("displaySlide");
 }
-nextBtn.addEventListener('click', () => {
-    showSlide(currentSlide + 1);
-});
 
-prevBtn.addEventListener('click', () => {
-    showSlide(currentSlide - 1);
-});
+function prevSlide(){  
+    clearInterval(intervalid);  
+    slideIndex --;
+    showSlide(slideIndex);
+}
 
-setInterval(() => {
-    showSlide(currentSlide + 1);
-}, 5000);
+
+function nextSlide(){
+    slideIndex++;
+    showSlide(slideIndex);
+}
+

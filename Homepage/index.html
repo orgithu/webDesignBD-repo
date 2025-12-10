@@ -4,71 +4,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/fixed.css">
-    <script src="/js/slider.js"></script>
+    <link rel="stylesheet" href="../css/fixed.css">
     <title>TECH STORE</title>
 </head>
-<body><!-- Header (same across all pages) -->
+<body>
     <header>
         <div class="header-top">
             <div class="header-logo">
-                <a href="/Homepage/index.html"><h1><img src="/logo.png" alt="TechStore Logo"> TechStore</h1></a>
+                <a href="index.html"><h1><img src="../logo.png" alt="TechStore Logo"> TechStore</h1></a>
             </div>
             <div class="header-search">
-                <form action="/search.html" method="get">
+                <form action="../search.html" method="get">
                     <input type="text" name="q" placeholder="Бүтээгдэхүүн хайх...">
                     <button type="submit" aria-label="Хайх">
-                        <img src="/media/search-icon.svg" alt="Search">
+                        <img src="../media/search-icon.svg" alt="Search">
                     </button>
                 </form>
             </div>
             <div class="header-actions">
-                <a href="/product_order/cart.html" class="cart-link">Сагс</a>
-                <a href="/shop_user/login.html">Нэвтрэх</a>
+                <a href="../product_order/cart.html" class="cart-link">Сагс</a>
+                <a href="../shop_user/login.html">Нэвтрэх</a>
             </div>
             <button class="hamburger" aria-label="Menu">☰</button>
         </div>
         <div class="header-bottom">
             <nav class="header-nav" id="main-nav">
-                <a href="/category/products.html">Бүтээгдэхүүн</a>
-                <a href="/category/categories.html">Ангилал</a>
-                <a href="/category/offers.html">Урамшуулал</a>
-                <a href="/build-pc.html">Build</a>
+                <a href="../category/products.html">Бүтээгдэхүүн</a>
+                <a href="../category/categories.html">Ангилал</a>
+                <a href="../category/offers.html">Урамшуулал</a>
+                <a href="../build-pc.html">Build</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero-slider">
-        
-        <div class="slide active">
-            <a href="/product/product1-detail.html">
-                <img src=" /media/banners/Banner_1.png" alt="processor Banner">
-                <div class="slide-content">
-                </div>
+    <div class="slider">
+        <div class = "slides">
+            <a class="product-link" href="../product/product1-detail.html">
+                <img class="slide" src="../media/banners/Banner_1.png" alt="Banner 1">
+            </a>
+
+            <a class="product-link" href="../product/product9-detail.html">
+                <img class="slide" src="../media/banners/Banner_2.png" alt="Banner 2">
+            </a>
+
+            <a class="product-link" href="../product/product6-detail.html">
+                <img class="slide" src="../media/banners/Banner_3.png" alt="Banner 3">
             </a>
         </div>
 
-        <div class="slide">
-            <a href="../product/product9-detail.html">
-                <img src="../media/banners/Banner_2.png" alt="Earphone Banner">
-                <div class="slide-content">
-                </div>
-            </a>
-        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
 
-        <div class="slide">
-            <a href="../product/product6-detail.html">
-                <img src="../media/banners/Banner_3.png" alt="Keyboard Banner">
-                <div class="slide-content">
-                </div>
-            </a>
-        </div>
-
-        <button class="prev-btn">&#10094;</button>
-        <button class="next-btn">&#10095;</button>
-
-    </section>
 
     <main>
         <section>
@@ -76,83 +63,107 @@
             <p>Та манай комьпютерийн дэлгүүрт тавтай морилно уу. Орчин үеийн ухаалаг цахилгаан барааг манайхаас хямд үнээр худалдаж авах боломжийг таньд олгож байна. Та тухтай үйлчлүүлээрэй!</p>
         </section>
         <hr>
-            <section class="featured-products">
-                <h1>Онцгой бүтээгдэхүүн</h1>
+        
+        <section class="featured-products">
+        <h1>Онцгой бүтээгдэхүүн</h1>
+        
+        <div class="carousel-wrapper">
+            
+            <button class="carousel-btn prev-btn" onclick="scrollProducts(-1)">&#10094;</button>
 
-                <div class="product-grid">
-                    <a class="product-link" href ="../product/product4-detail.html">
-                        <div class="product-card">
-                            <img src="../media/laptop.jpg" alt="Barbie limited edition laptop">
-                            <h4>Охидод зориулсан шинэ загварийн laptop - Barbie edition</h4>
-                            <p>Үнэ: 2,830,000 ₮</p>
-                        </div>
-                    </a>
-
-                    <a class ="product-link" href="../product/product5-detail.html">
-                        <div class="product-card">
-                            <img src="../media/pink-retro-computer.jpg" alt="Pink retro computer">
-                            <h4>Ретро загвартай компьютер</h4>
-                            <p>Үнэ: 2,800,000 ₮</p>
-                        </div>
-                    </a>
-
-                    <a class ="product-link" href="../product/product6-detail.html">
-                        <div class="product-card">
-                            <img src="../media/tablet-keyboard.jpg" alt="Tablet keyboard">
-                            <h4>Ретро загвартай таблетний keyboard</h4>
-                            <p>Үнэ: 380'000 ₮</p>
-                        </div>
-                    </a>
-                </div>
-            </section>
-            <section class="latest-news">
-                <h1>Шинээр нэмэгдсэн бараа</h1>
-
-                <div class="product-grid">
+            <div class="product-carousel" id="productList">
                 
+                <a class="product-link" href="../product/product4-detail.html">
+                    <div class="product-card">
+                        <img src="../media/laptop.jpg" alt="Barbie laptop">
+                        <h4>Barbie limited edition laptop</h4>
+                        <p>Үнэ: 2,830,000 ₮</p>
+                    </div>
+                </a>
+
+                <a class="product-link" href="../product/product5-detail.html">
+                    <div class="product-card">
+                        <img src="../media/pink-retro-computer.jpg" alt="Retro computer">
+                        <h4>Ретро загвартай компьютер</h4>
+                        <p>Үнэ: 2,800,000 ₮</p>
+                    </div>
+                </a>
+
+                <a class="product-link" href="../product/product6-detail.html">
+                    <div class="product-card">
+                        <img src="../media/tablet-keyboard.jpg" alt="Tablet keyboard">
+                        <h4>Ретро таблетний keyboard</h4>
+                        <p>Үнэ: 380'000 ₮</p>
+                    </div>
+                </a>
+
                 <a class="product-link" href="../product/product1-detail.html">
                     <div class="product-card">
-                        <img src="../media/product1.png" alt="white intel processor"> 
-                        <h4>Intel Core i5 14400F Gaming PC</h4>
-                        <p>Үнэ: 2,920,000 ₮</p>
+                        <img src="../media/product1.png" alt="Intel Core i5">
+                        <h4>Intel Core i5 14400F</h4>
+                        <p>2,920,000 ₮</p>
                     </div>
                 </a>
 
-                <a class="product-link" href="../product/product2-detail.html">
-                    <div class="product-card">
-                        <img src="../media/product2.png" alt="AMD ryzen 7">
-                        <h4>AMD Ryzen 7 7800X3D</h4>
-                        <p>6,750,000 ₮</p>
-                    </div>
-                </a>
+                                    <a class="product-link" href="../product/product3-detail.html">
+                        <div class="product-card">
+                            <img src="../media/product3.png" alt="black processor">
+                            <h4>Black processor</h4>
+                            <p>Үнэ: 3,210,000 ₮</p>
+                        </div>
+                    </a>
+                
+            </div>
 
-                <a class="product-link" href="../product/product3-detail.html">
-                    <div class="product-card">
-                        <img src="../media/product3.png" alt="black processor">
-                        <h4>Black processor</h4>
-                        <p>Үнэ: 3,210,000 ₮</p>
-                    </div>
-                </a>
+            <button class="carousel-btn next-btn" onclick="scrollProducts(1)">&#10095;</button>
+            <button class="carousel-btn next-btn" onclick="scrollProducts(1)">&#10095;</button>
+        </div>
+    </section>
+
+            <section class="latest-news">
+                <h1>Шинээр нэмэгдсэн бараа</h1>
+                <div class="product-grid">
+                    <a class="product-link" href="../product/product1-detail.html">
+                        <div class="product-card">
+                            <img src="../media/product1.png" alt="white intel processor"> 
+                            <h4>Intel Core i5 14400F Gaming PC</h4>
+                            <p>Үнэ: 2,920,000 ₮</p>
+                        </div>
+                    </a>
+
+                    <a class="product-link" href="../product/product2-detail.html">
+                        <div class="product-card">
+                            <img src="../media/product2.png" alt="AMD ryzen 7">
+                            <h4>AMD Ryzen 7 7800X3D</h4>
+                            <p>6,750,000 ₮</p>
+                        </div>
+                    </a>
+
+                    <a class="product-link" href="../product/product3-detail.html">
+                        <div class="product-card">
+                            <img src="../media/product3.png" alt="black processor">
+                            <h4>Black processor</h4>
+                            <p>Үнэ: 3,210,000 ₮</p>
+                        </div>
+                    </a>
                 </div>
             </section>
     </main>
 
     <hr>
 
-     <footer>
+    <footer>
         <p>2025 TechStore. Зохиогчийн эрх хуулиар хамгаалагдсан.</p>
-        <a href="/Homepage/about.html">Бидний тухай</a> |
-        <a href="/Homepage/faq.html">Асуулт ба хариулт</a> |
-        <a href="/Homepage/our-team.html">Манай баг</a> |
-        <a href="/Homepage/contact-us.html">Холбоо барих</a> |
+        <a href="about.html">Бидний тухай</a> |
+        <a href="faq.html">Асуулт ба хариулт</a> |
+        <a href="our-team.html">Манай баг</a> |
+        <a href="contact-us.html">Холбоо барих</a> |
     </footer>
 
-    <script src="/js/search.js"></script>
-    <script src="/js/slider.js"></script>
-    <script src="/js/header.js"></script>
-<script src="/js/header.js"></script>
+    <script src="../js/header.js"></script>
+    <script src="../js/slider.js"></script>
+    <script src="../js/carousel.js"></script>
 </body>
 </html>
 
-
-
+<!--bbb-->
